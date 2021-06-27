@@ -1,0 +1,31 @@
+body{
+    background-color: beige;
+    color: black;
+    margin-top: 50px;
+    text-align: center;
+    
+}
+
+.madlib-container{
+    display: flex;
+    justify-content: flex-start;
+    margin: 30px;
+}
+
+.generate-madlib{
+    position: fixed;
+    right: 1130px;
+
+}
+
+.buttons > .reset{
+    position: absolute;
+    bottom: 10%;
+    right:50%;
+}
+
+.random-word{
+    display: block;
+}
+
+

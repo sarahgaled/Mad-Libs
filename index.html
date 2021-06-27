@@ -13,13 +13,32 @@
 <body>
     <h1>Adult Mad Libs</h1>
 
-    <div class="madlib-container"></div>
+    <div class="madlib-container">
+        <form class="input-text">
+            <input id="noun" type="text" placeholder="noun"><br />
+            <input id="verb" type="text" placeholder="verb"><br />
+            <input id="adjective" type="text" placeholder="adjective"><br />
+            <input id="adverb" type="text" placeholder="adverb"><br />
+            <input id="plural-noun" type="text" placeholder="plural noun"><br />
+        </form>
 
-    <input id="input-text" type="text">
-    <p class="madlib-content"></p>
+        <div class='buttons'>
+            <button class="reset">Reset</button>
+            <button class="random-word">Random</button>
+            <button class="random-word">Random</button>
+            <button class="random-word">Random</button>
+            <button class="random-word">Random</button>
+            <button class="random-word">Random</button>
+            <button class="totally-random-word">Totally Random</button>
+            <button class="generate-madlib">Lib it</button>
 
 
+        </div>
+    </div>
 
+    <div>
+        <p id="madlib-content"></p>
+    </div>
 
 </body>
 
