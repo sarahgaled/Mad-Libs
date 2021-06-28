@@ -48,6 +48,9 @@ const randomPluralNoun = document.querySelector("#random-plural-noun")
 const totallyRandom = document.querySelector("#totally-random-button")
 const categoryContainer = document.querySelector('.category-container')
 const specialButton = document.getElementById('magic')
+
+categoryContainer.style.visibility = 'visible'
+
 /*----------------------------- Event Listeners -----------------------------*/
 
 // lightDarkBtn.addEventListener("click", colorScheme.change)
@@ -138,7 +141,7 @@ function totalAutoFill() {
 // }
 
 function toggleVisibility(){
-    categoryContainer.style.display= 'none'
+    //categoryContainer.style.display= 'none'
     if (categoryContainer.style.visibility === 'visible') {
         categoryContainer.style.visibility = 'hidden'
     } else {
