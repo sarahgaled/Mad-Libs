@@ -48,8 +48,11 @@ const randomPluralNoun = document.querySelector("#random-plural-noun")
 const totallyRandom = document.querySelector("#totally-random-button")
 const categoryContainer = document.querySelector('.category-container')
 const specialButton = document.getElementById('magic')
-
-categoryContainer.style.visibility = 'visible'
+const friends = document.querySelector(".friends")
+const corporateAmerica = document.querySelector(".ca")
+const groceries = document.querySelector(".groceries")
+const parties = document.querySelector(".parties")
+categoryContainer.style.display = 'visible'
 
 /*----------------------------- Event Listeners -----------------------------*/
 
@@ -61,6 +64,10 @@ randomVerb.addEventListener('click', autoFillVerb)
 randomAdjective.addEventListener('click', autoFillAdjective)
 randomAdverb.addEventListener('click', autoFillAdverb)
 randomPluralNoun.addEventListener('click', autoFillPluralNoun)
+friends.addEventListener('click', toggleVisibility)
+corporateAmerica.addEventListener('click', toggleVisibility)
+groceries.addEventListener('click', toggleVisibility)
+parties.addEventListener('click', toggleVisibility)
 totallyRandom.addEventListener('click', totalAutoFill)
 libIt.addEventListener('click', generateStory)
 reset.addEventListener("click", resetStory)
@@ -142,10 +149,10 @@ function totalAutoFill() {
 
 function toggleVisibility(){
     //categoryContainer.style.display= 'none'
-    if (categoryContainer.style.visibility === 'visible') {
-        categoryContainer.style.visibility = 'hidden'
+    if (categoryContainer.style.display === 'visible') {
+        categoryContainer.style.display = 'hidden'
     } else {
-        categoryContainer.style.visibility = 'visible'
+        categoryContainer.style.display = 'visible'
     }
 
 }
