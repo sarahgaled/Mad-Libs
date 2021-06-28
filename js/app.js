@@ -127,6 +127,12 @@ function autoFillPluralNoun(){
 }
 
 function totalAutoFill(){
+    noun.value = generateRandom(nounList)
+    verb.value = generateRandom(verbList)
+    adjective.value = generateRandom(adjectiveList)
+    adverb.value = generateRandom(adverbList)
+    pluralNoun.value = generateRandom(pluralNounList)
+
 
 }
 
