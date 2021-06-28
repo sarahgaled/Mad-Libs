@@ -46,6 +46,10 @@ const randomAdjective = document.querySelector("#random-adjective")
 const randomAdverb = document.querySelector("#random-adverb")
 const randomPluralNoun = document.querySelector("#random-plural-noun")
 const totallyRandom = document.querySelector("#totally-random-button")
+const friends = document.querySelector(".friends")
+const corporateAmerica = document.querySelector(".ca")
+const groceries = document.querySelector(".groceries")
+const parties = document.querySelector(".parties")
 /*----------------------------- Event Listeners -----------------------------*/
 
 // lightDarkBtn.addEventListener("click", colorScheme.change)
@@ -55,6 +59,10 @@ randomVerb.addEventListener('click', autoFillVerb)
 randomAdjective.addEventListener('click', autoFillAdjective)
 randomAdverb.addEventListener('click', autoFillAdverb)
 randomPluralNoun.addEventListener('click', autoFillPluralNoun)
+friends.addEventListener('click',)
+corporateAmerica.addEventListener('click',)
+groceries.addEventListener('click',)
+parties.addEventListener('click',)
 totallyRandom.addEventListener('click', totalAutoFill)
 libIt.addEventListener('click', generateStory)
 reset.addEventListener("click", resetStory)
@@ -139,12 +147,9 @@ function hideCategories(){
   
         document.querySelector("Friends").style.display = "none"
 
-
     document.querySelector("CA").onclick 
 
         document.querySelector("CA").style.display = "none"
-
-
 
     document.querySelector("Groceries").onclick 
 
