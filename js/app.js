@@ -17,18 +17,16 @@ let player, submit, generate, story
 let nounList = [ 'abandoned home', 'airfield', 'amusement park', 'antique shop', 'apple orchard', 'arena', 'auction house', 'Bangkok, Thailand', 'bathroom', 'bazaar', 'bridge', 'Cabo', 'cafeteria', 'cemetery', 'chamber', 'church', 'construction site', 'cornfield', 'courthouse', 'crack house', 'factory reset button', 'blood rage', 'idiot', 'toaster', 'legend', 'death wish', 'therapy', 'goal in life', 'marketing idea', 'psychic', 'knife', 'sandwich', 'hunting ground', 'lettuce', 'kitty', 'friendly grandma', 'french chef', 'antidepressant drug']
 
 
-// let adjective = ['dead', 'hairless', 'sadistic', 'metal', 'wild', 'domesticated', 'abnormal', 'medicated', 'cocky', 'massive', 'disrespectful', 'impressive', 'out of control', 'internet worthy', 'hilarious', 'sexy', 'hot', 'very tactful', 'bearded', 'duck-like', 'violent', 'slimy', 'insanely creepy','embarrassed to the bone', 'self-centered', 'talking', 'naked', 'angry', 'shaky', 'deep', 'sick', 'zippy', 'sticky', 'fluffy', 'frozen', 'unholy', 'painfully honest', 'filthy', 'fighting', 'bonkers', 'harsh', 'frisky', 'greedy', 'crawly', 'insane', 'hideous', 'ungodly', 'abusive', 'drunken', 'hateful', 'idiotic','twisted', 'useless', 'yapping', 'magical', 'indecent', 'godawful', 'arrogant', 'confused', 'flirting', 'high-end','insecure', 'maniacal']
+ let adjectiveList = ['dead', 'hairless', 'sadistic', 'metal', 'wild', 'domesticated', 'abnormal', 'medicated', 'cocky', 'massive', 'disrespectful', 'impressive', 'out of control', 'internet worthy', 'hilarious', 'sexy', 'hot', 'very tactful', 'bearded', 'duck-like', 'violent', 'slimy', 'insanely creepy','embarrassed to the bone', 'self-centered', 'talking', 'naked', 'angry', 'shaky', 'deep', 'sick', 'zippy', 'sticky', 'fluffy', 'frozen', 'unholy', 'painfully honest', 'filthy', 'fighting', 'bonkers', 'harsh', 'frisky', 'greedy', 'crawly', 'insane', 'hideous', 'ungodly', 'abusive', 'drunken', 'hateful', 'idiotic','twisted', 'useless', 'yapping', 'magical', 'indecent', 'godawful', 'arrogant', 'confused', 'flirting', 'high-end','insecure', 'maniacal']
 
 
  let verbList = ['surround', 'stab','return','medicate','blindside', 'boogie', 'flap', 'trip', 'swat', 'suck in', 'harass', 'trap', 'snoop', 'explode', 'sketch', 'scatter', 'challenge','fight', 'bury', 'splatter', 'smack', 'peddle', 'balance', 'trip up', 'boggle', 'poke','critique', 'fear', 'initiate', 'line up', 'run over', 'schedule', 'cook', 'imprison','underestimate', 'cajole', 'wheedle', 'soft soap', 'butter up', 'sweet-talk', 'prevail', 'shred', 'drink', 'dispute', 'echo', 'mimic', 'berate', 'castigate','underrate', 'taunt']
 
 
-// let adVerb = [
-//     'tightly', 'joyously', 'shyly' ,'unaccountably', 'frantically', 'dreamily', 'evenly', 'enormously', 'loudly', 'joyfully', 'quaintly', 'afterwards', 'eventually', 'nervously','truthfully', 'fortunately', 'daily', 'poorly', 'frightfully', 'equally', 'less', 'annually', 'officially', 'acidly', 'wildly', 'dimly', 'readily', 'weakly', 'fiercely','quietly', 'perfectly', 'judgmentally', 'regularly', 'gently', 'madly', 'knowledgeably','scarily', 'helpfully', 'enormously', 'mostly', 'gladly', 'greatly', 'frightfully', 'woefully', 'irritably', 'fortunately', 'utterly', 'heavily', 'extremely', 'enthusiastically', 'reluctantly', 'patiently', 'kindly', 'faithfully', 'courageously', 'shakily', 'politely', 'daringly', 'powerfully', 'lazily', 'diligently', 'ingeniously','keenly', 'nearly', 'beautifully', 'cheerfully', 'physically', 'promptly', 'victoriously','unnecessarily', 'ferociously', 'stealthily', 'foolishly', 'valiantly', 'daintily', 'joyfully']
+ let adverbList = ['tightly', 'joyously', 'shyly' ,'unaccountably', 'frantically', 'dreamily', 'evenly', 'enormously', 'loudly', 'joyfully', 'quaintly', 'afterwards', 'eventually', 'nervously','truthfully', 'fortunately', 'daily', 'poorly', 'frightfully', 'equally', 'less', 'annually', 'officially', 'acidly', 'wildly', 'dimly', 'readily', 'weakly', 'fiercely','quietly', 'perfectly', 'judgmentally', 'regularly', 'gently', 'madly', 'knowledgeably','scarily', 'helpfully', 'enormously', 'mostly', 'gladly', 'greatly', 'frightfully', 'woefully', 'irritably', 'fortunately', 'utterly', 'heavily', 'extremely', 'enthusiastically', 'reluctantly', 'patiently', 'kindly', 'faithfully', 'courageously', 'shakily', 'politely', 'daringly', 'powerfully', 'lazily', 'diligently', 'ingeniously','keenly', 'nearly', 'beautifully', 'cheerfully', 'physically', 'promptly', 'victoriously','unnecessarily', 'ferociously', 'stealthily', 'foolishly', 'valiantly', 'daintily', 'joyfully']
 
 
-// let pluralNoun = [
-//     'axes', 'heroes', 'crises', 'businesses', 'viruses', 'phenomena', 'mongooses', 'software', 'equipment', 'platypuses', 'dice', 'oxen', 'sheep']
+ let pluralNounList = ['axes', 'heroes', 'crises', 'businesses', 'viruses', 'phenomena', 'mongooses', 'software', 'equipment', 'platypuses', 'dice', 'oxen', 'sheep']
 
 /*------------------------ Cached Element References ------------------------*/
 
@@ -52,6 +50,10 @@ const randomPluralNoun = document.querySelector("#random-plural-noun")
 // lightDarkBtn.addEventListener("click", colorScheme.change)
 
 randomNoun.addEventListener('click', autoFillNoun)
+randomVerb.addEventListener('click', autoFillVerb)
+randomAdjective.addEventListener('click', autoFillVerb)
+randomVerb.addEventListener('click', autoFillVerb)
+randomVerb.addEventListener('click', autoFillVerb)
 libIt.addEventListener('click', generateStory)
 reset.addEventListener("click", resetStory)
 form.addEventListener("submit", function(evt){
@@ -102,7 +104,30 @@ function generateRandom(choicesArr){
 
 function autoFillNoun(){
      noun.value = generateRandom(nounList)
-     console.log(generateRandom(verbList))
+}
+
+function autoFillVerb(){
+   
+    verb.value = generateRandom(verbList)
+}
+
+function autoFillAdjective(){
+   
+    adjective.value = generateRandom(adjectiveList)
+}
+
+function autoFillAdverb(){
+   
+    adverb.value = generateRandom(adverbList)
+}
+
+function autoPluralNoun(){
+   
+    pluralNoun.value = generateRandom(pluralNounList)
+}
+
+function totalAutoFill{
+
 }
 
 
