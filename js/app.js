@@ -20,8 +20,7 @@ let nounList = [ 'abandoned home', 'airfield', 'amusement park', 'antique shop',
 // let adjective = ['dead', 'hairless', 'sadistic', 'metal', 'wild', 'domesticated', 'abnormal', 'medicated', 'cocky', 'massive', 'disrespectful', 'impressive', 'out of control', 'internet worthy', 'hilarious', 'sexy', 'hot', 'very tactful', 'bearded', 'duck-like', 'violent', 'slimy', 'insanely creepy','embarrassed to the bone', 'self-centered', 'talking', 'naked', 'angry', 'shaky', 'deep', 'sick', 'zippy', 'sticky', 'fluffy', 'frozen', 'unholy', 'painfully honest', 'filthy', 'fighting', 'bonkers', 'harsh', 'frisky', 'greedy', 'crawly', 'insane', 'hideous', 'ungodly', 'abusive', 'drunken', 'hateful', 'idiotic','twisted', 'useless', 'yapping', 'magical', 'indecent', 'godawful', 'arrogant', 'confused', 'flirting', 'high-end','insecure', 'maniacal']
 
 
-// let verb = [
-//     'surround', 'stab','return','medicate','blindside', 'boogie', 'flap', 'trip', 'swat', 'suck in', 'harass', 'trap', 'snoop', 'explode', 'sketch', 'scatter', 'challenge','fight', 'bury', 'splatter', 'smack', 'peddle', 'balance', 'trip up', 'boggle', 'poke','critique', 'fear', 'initiate', 'line up', 'run over', 'schedule', 'cook', 'imprison','underestimate', 'cajole', 'wheedle', 'soft soap', 'butter up', 'sweet-talk', 'prevail', 'shred', 'drink', 'dispute', 'echo', 'mimic', 'berate', 'castigate','underrate', 'taunt']
+ let verbList = ['surround', 'stab','return','medicate','blindside', 'boogie', 'flap', 'trip', 'swat', 'suck in', 'harass', 'trap', 'snoop', 'explode', 'sketch', 'scatter', 'challenge','fight', 'bury', 'splatter', 'smack', 'peddle', 'balance', 'trip up', 'boggle', 'poke','critique', 'fear', 'initiate', 'line up', 'run over', 'schedule', 'cook', 'imprison','underestimate', 'cajole', 'wheedle', 'soft soap', 'butter up', 'sweet-talk', 'prevail', 'shred', 'drink', 'dispute', 'echo', 'mimic', 'berate', 'castigate','underrate', 'taunt']
 
 
 // let adVerb = [
@@ -43,12 +42,16 @@ const adjective = document.querySelector("#adjective")
 const adverb = document.querySelector("#adverb")
 const pluralNoun = document.querySelector("#plural-noun")
 const messageElement = document.querySelector("#message")
-
+const randomNoun = document.querySelector("#random-noun")
+const randomVerb = document.querySelector("#random-verb")
+const randomAdjective = document.querySelector("#random-adjective")
+const randomAdverb = document.querySelector("#random-adverb")
+const randomPluralNoun = document.querySelector("#random-plural-noun")
 /*----------------------------- Event Listeners -----------------------------*/
 
-//randomWord.addEventListener()
-//totallyRandomWord.addEventListener()
 // lightDarkBtn.addEventListener("click", colorScheme.change)
+
+randomNoun.addEventListener('click', autoFillNoun)
 libIt.addEventListener('click', generateStory)
 reset.addEventListener("click", resetStory)
 form.addEventListener("submit", function(evt){
@@ -92,16 +95,14 @@ function generateStory(){ //grab the input values to generate the story
 function generateRandom(choicesArr){
 
     let randomItem 
-    let randomIdx = 0
     randomItem = choicesArr[Math.floor(Math.random() * choicesArr.length)] 
-
 
     return randomItem
 }
 
-
-function autoFill(){
-     console.log(generateRandom(nounList))
+function autoFillNoun(){
+     noun.value = generateRandom(nounList)
+     console.log(generateRandom(verbList))
 }
 
 
