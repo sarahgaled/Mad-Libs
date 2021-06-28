@@ -14,19 +14,19 @@
 
 let player, submit, generate, story
 
-let nounList = [ 'abandoned home', 'airfield', 'amusement park', 'antique shop', 'apple orchard', 'arena', 'auction house', 'Bangkok, Thailand', 'bathroom', 'bazaar', 'bridge', 'Cabo', 'cafeteria', 'cemetery', 'chamber', 'church', 'construction site', 'cornfield', 'courthouse', 'crack house', 'factory reset button', 'blood rage', 'idiot', 'toaster', 'legend', 'death wish', 'therapy', 'goal in life', 'marketing idea', 'psychic', 'knife', 'sandwich', 'hunting ground', 'lettuce', 'kitty', 'friendly grandma', 'french chef', 'antidepressant drug']
+let nounList = ['abandoned home', 'airfield', 'amusement park', 'antique shop', 'apple orchard', 'arena', 'auction house', 'Bangkok, Thailand', 'bathroom', 'bazaar', 'bridge', 'Cabo', 'cafeteria', 'cemetery', 'chamber', 'church', 'construction site', 'cornfield', 'courthouse', 'crack house', 'factory reset button', 'blood rage', 'idiot', 'toaster', 'legend', 'death wish', 'therapy', 'goal in life', 'marketing idea', 'psychic', 'knife', 'sandwich', 'hunting ground', 'lettuce', 'kitty', 'friendly grandma', 'french chef', 'antidepressant drug']
 
 
- let adjectiveList = ['dead', 'hairless', 'sadistic', 'metal', 'wild', 'domesticated', 'abnormal', 'medicated', 'cocky', 'massive', 'disrespectful', 'impressive', 'out of control', 'internet worthy', 'hilarious', 'sexy', 'hot', 'very tactful', 'bearded', 'duck-like', 'violent', 'slimy', 'insanely creepy','embarrassed to the bone', 'self-centered', 'talking', 'naked', 'angry', 'shaky', 'deep', 'sick', 'zippy', 'sticky', 'fluffy', 'frozen', 'unholy', 'painfully honest', 'filthy', 'fighting', 'bonkers', 'harsh', 'frisky', 'greedy', 'crawly', 'insane', 'hideous', 'ungodly', 'abusive', 'drunken', 'hateful', 'idiotic','twisted', 'useless', 'yapping', 'magical', 'indecent', 'godawful', 'arrogant', 'confused', 'flirting', 'high-end','insecure', 'maniacal']
+let adjectiveList = ['dead', 'hairless', 'sadistic', 'metal', 'wild', 'domesticated', 'abnormal', 'medicated', 'cocky', 'massive', 'disrespectful', 'impressive', 'out of control', 'internet worthy', 'hilarious', 'sexy', 'hot', 'very tactful', 'bearded', 'duck-like', 'violent', 'slimy', 'insanely creepy', 'embarrassed to the bone', 'self-centered', 'talking', 'naked', 'angry', 'shaky', 'deep', 'sick', 'zippy', 'sticky', 'fluffy', 'frozen', 'unholy', 'painfully honest', 'filthy', 'fighting', 'bonkers', 'harsh', 'frisky', 'greedy', 'crawly', 'insane', 'hideous', 'ungodly', 'abusive', 'drunken', 'hateful', 'idiotic', 'twisted', 'useless', 'yapping', 'magical', 'indecent', 'godawful', 'arrogant', 'confused', 'flirting', 'high-end', 'insecure', 'maniacal']
 
 
- let verbList = ['surround', 'stab','return','medicate','blindside', 'boogie', 'flap', 'trip', 'swat', 'suck in', 'harass', 'trap', 'snoop', 'explode', 'sketch', 'scatter', 'challenge','fight', 'bury', 'splatter', 'smack', 'peddle', 'balance', 'trip up', 'boggle', 'poke','critique', 'fear', 'initiate', 'line up', 'run over', 'schedule', 'cook', 'imprison','underestimate', 'cajole', 'wheedle', 'soft soap', 'butter up', 'sweet-talk', 'prevail', 'shred', 'drink', 'dispute', 'echo', 'mimic', 'berate', 'castigate','underrate', 'taunt']
+let verbList = ['surround', 'stab', 'return', 'medicate', 'blindside', 'boogie', 'flap', 'trip', 'swat', 'suck in', 'harass', 'trap', 'snoop', 'explode', 'sketch', 'scatter', 'challenge', 'fight', 'bury', 'splatter', 'smack', 'peddle', 'balance', 'trip up', 'boggle', 'poke', 'critique', 'fear', 'initiate', 'line up', 'run over', 'schedule', 'cook', 'imprison', 'underestimate', 'cajole', 'wheedle', 'soft soap', 'butter up', 'sweet-talk', 'prevail', 'shred', 'drink', 'dispute', 'echo', 'mimic', 'berate', 'castigate', 'underrate', 'taunt']
 
 
- let adverbList = ['tightly', 'joyously', 'shyly' ,'unaccountably', 'frantically', 'dreamily', 'evenly', 'enormously', 'loudly', 'joyfully', 'quaintly', 'afterwards', 'eventually', 'nervously','truthfully', 'fortunately', 'daily', 'poorly', 'frightfully', 'equally', 'less', 'annually', 'officially', 'acidly', 'wildly', 'dimly', 'readily', 'weakly', 'fiercely','quietly', 'perfectly', 'judgmentally', 'regularly', 'gently', 'madly', 'knowledgeably','scarily', 'helpfully', 'enormously', 'mostly', 'gladly', 'greatly', 'frightfully', 'woefully', 'irritably', 'fortunately', 'utterly', 'heavily', 'extremely', 'enthusiastically', 'reluctantly', 'patiently', 'kindly', 'faithfully', 'courageously', 'shakily', 'politely', 'daringly', 'powerfully', 'lazily', 'diligently', 'ingeniously','keenly', 'nearly', 'beautifully', 'cheerfully', 'physically', 'promptly', 'victoriously','unnecessarily', 'ferociously', 'stealthily', 'foolishly', 'valiantly', 'daintily', 'joyfully']
+let adverbList = ['tightly', 'joyously', 'shyly', 'unaccountably', 'frantically', 'dreamily', 'evenly', 'enormously', 'loudly', 'joyfully', 'quaintly', 'afterwards', 'eventually', 'nervously', 'truthfully', 'fortunately', 'daily', 'poorly', 'frightfully', 'equally', 'less', 'annually', 'officially', 'acidly', 'wildly', 'dimly', 'readily', 'weakly', 'fiercely', 'quietly', 'perfectly', 'judgmentally', 'regularly', 'gently', 'madly', 'knowledgeably', 'scarily', 'helpfully', 'enormously', 'mostly', 'gladly', 'greatly', 'frightfully', 'woefully', 'irritably', 'fortunately', 'utterly', 'heavily', 'extremely', 'enthusiastically', 'reluctantly', 'patiently', 'kindly', 'faithfully', 'courageously', 'shakily', 'politely', 'daringly', 'powerfully', 'lazily', 'diligently', 'ingeniously', 'keenly', 'nearly', 'beautifully', 'cheerfully', 'physically', 'promptly', 'victoriously', 'unnecessarily', 'ferociously', 'stealthily', 'foolishly', 'valiantly', 'daintily', 'joyfully']
 
 
- let pluralNounList = ['axes', 'heroes', 'crises', 'businesses', 'viruses', 'phenomena', 'mongooses', 'software', 'equipment', 'platypuses', 'dice', 'oxen', 'sheep']
+let pluralNounList = ['axes', 'heroes', 'crises', 'businesses', 'viruses', 'phenomena', 'mongooses', 'software', 'equipment', 'platypuses', 'dice', 'oxen', 'sheep']
 
 /*------------------------ Cached Element References ------------------------*/
 
@@ -58,13 +58,13 @@ randomPluralNoun.addEventListener('click', autoFillPluralNoun)
 totallyRandom.addEventListener('click', totalAutoFill)
 libIt.addEventListener('click', generateStory)
 reset.addEventListener("click", resetStory)
-form.addEventListener("submit", function(evt){
+form.addEventListener("submit", function (evt) {
     evt.preventDefault()
 })
 /*-------------------------------- Functions --------------------------------*/
 
 
-function generateStory(){ //grab the input values to generate the story
+function generateStory() { //grab the input values to generate the story
 
     let noun = document.getElementById('noun').value
     let verb = document.getElementById('verb').value
@@ -72,20 +72,20 @@ function generateStory(){ //grab the input values to generate the story
     let adverb = document.getElementById('adverb').value
     let pluralNoun = document.getElementById('plural-noun').value
 
-    if (noun && verb && adjective && adverb && pluralNoun){
-        
+    if (noun && verb && adjective && adverb && pluralNoun) {
+
         let story = ""
-        story = 'There are too many ' + pluralNoun + ' on this ' + noun + ' that are ' + verb + ' too loud. Someone please ' + verb + ' what your ' + verb + ' ah this sun is too ' + adjective + ', please someone do something about it ' + adverb
-        
+        story = `There are too many ${pluralNoun} on this ${noun} that are ${verb} too loud. Someone please ${verb} what your ${verb}  ah this sun is too ${adjective}, please someone do something about it ${adverb}`
+
         madlibContent.innerText = story
-        
-    // } else {
-    //     messageElement.innerText = `please fill out the madlib`
+
+        // } else {
+        //     messageElement.innerText = `please fill out the madlib`
     }
 
- }
+}
 
- function resetStory(){ //reseting all the inputs to strings which essentially resets the story
+function resetStory() { //reseting all the inputs to strings which essentially resets the story
     noun.value = ""
     verb.value = ""
     adjective.value = ""
@@ -93,51 +93,46 @@ function generateStory(){ //grab the input values to generate the story
     pluralNoun.value = ""
 
     madlibContent.innerHTML = ""
- }
+}
 
+function generateRandom(choicesArr) {
 
-function generateRandom(choicesArr){
-
-    let randomItem 
-    randomItem = choicesArr[Math.floor(Math.random() * choicesArr.length)] 
-
+    let randomItem
+    randomItem = choicesArr[Math.floor(Math.random() * choicesArr.length)]
     return randomItem
 }
 
-function autoFillNoun(){
-     noun.value = generateRandom(nounList)
+function autoFillNoun() {
+    noun.value = generateRandom(nounList)
 }
 
-function autoFillVerb(){
-   
+function autoFillVerb() {
     verb.value = generateRandom(verbList)
 }
 
-function autoFillAdjective(){
-   
+function autoFillAdjective() {
     adjective.value = generateRandom(adjectiveList)
 }
 
-function autoFillAdverb(){
-   
+function autoFillAdverb() {
     adverb.value = generateRandom(adverbList)
 }
 
-function autoFillPluralNoun(){
-   
+function autoFillPluralNoun() {
     pluralNoun.value = generateRandom(pluralNounList)
 }
 
-function totalAutoFill(){
+function totalAutoFill() {
     noun.value = generateRandom(nounList)
     verb.value = generateRandom(verbList)
     adjective.value = generateRandom(adjectiveList)
     adverb.value = generateRandom(adverbList)
     pluralNoun.value = generateRandom(pluralNounList)
-
-
 }
 
+function categories(){
+
+}
 
 // function handleClick(){
 
