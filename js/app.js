@@ -131,6 +131,25 @@ function totalAutoFill() {
 }
 
 function categories(){
+    document.querySelector(".categories").style.display = "block"
+}
+
+function hideCategories(){
+    document.querySelector("Friends").onclick
+  
+        document.querySelector("Friends").style.display = "none"
+
+
+    document.querySelector("CA").onclick 
+
+        document.querySelector("CA").style.display = "none"
+
+
+
+    document.querySelector("Groceries").onclick 
+
+        document.querySelector("Groceries").style.display = "none";
+
 
 }
 

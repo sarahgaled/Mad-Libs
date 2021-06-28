@@ -28,4 +28,11 @@ body{
     display: block;
 }
 
+.Friends{
+    width: 130px;
+           height: 130px;
+           border-radius: 50%;
+           float: left;
+           margin-right: 50px;
+}
 
