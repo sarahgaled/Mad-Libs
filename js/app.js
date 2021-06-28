@@ -14,7 +14,7 @@
 
 let player, submit, generate, story
 
-// let noun = [ 'abandoned home', 'airfield', 'amusement park', 'antique shop', 'apple orchard', 'arena', 'auction house', 'Bangkok, Thailand', 'bathroom', 'bazaar', 'bridge', 'Cabo', 'cafeteria', 'cemetery', 'chamber', 'church', 'construction site', 'cornfield', 'courthouse', 'crack house', 'factory reset button', 'blood rage', 'idiot', 'toaster', 'legend', 'death wish', 'therapy', 'goal in life', 'marketing idea', 'psychic', 'knife', 'sandwich', 'hunting ground', 'lettuce', 'kitty', 'friendly grandma', 'french chef', 'antidepressant drug']
+let nounList = [ 'abandoned home', 'airfield', 'amusement park', 'antique shop', 'apple orchard', 'arena', 'auction house', 'Bangkok, Thailand', 'bathroom', 'bazaar', 'bridge', 'Cabo', 'cafeteria', 'cemetery', 'chamber', 'church', 'construction site', 'cornfield', 'courthouse', 'crack house', 'factory reset button', 'blood rage', 'idiot', 'toaster', 'legend', 'death wish', 'therapy', 'goal in life', 'marketing idea', 'psychic', 'knife', 'sandwich', 'hunting ground', 'lettuce', 'kitty', 'friendly grandma', 'french chef', 'antidepressant drug']
 
 
 // let adjective = ['dead', 'hairless', 'sadistic', 'metal', 'wild', 'domesticated', 'abnormal', 'medicated', 'cocky', 'massive', 'disrespectful', 'impressive', 'out of control', 'internet worthy', 'hilarious', 'sexy', 'hot', 'very tactful', 'bearded', 'duck-like', 'violent', 'slimy', 'insanely creepy','embarrassed to the bone', 'self-centered', 'talking', 'naked', 'angry', 'shaky', 'deep', 'sick', 'zippy', 'sticky', 'fluffy', 'frozen', 'unholy', 'painfully honest', 'filthy', 'fighting', 'bonkers', 'harsh', 'frisky', 'greedy', 'crawly', 'insane', 'hideous', 'ungodly', 'abusive', 'drunken', 'hateful', 'idiotic','twisted', 'useless', 'yapping', 'magical', 'indecent', 'godawful', 'arrogant', 'confused', 'flirting', 'high-end','insecure', 'maniacal']
@@ -65,27 +65,18 @@ function generateStory(){ //grab the input values to generate the story
     let adverb = document.getElementById('adverb').value
     let pluralNoun = document.getElementById('plural-noun').value
 
-    let story = ""
-    story = 'There are too many ' + pluralNoun + ' on this ' + noun + ' that are ' + verb + ' too loud. Someone please ' + verb + ' what your ' + verb + ' ah this sun is too ' + adjective + ', please someone do something about it ' + adverb
-    
-    madlibContent.innerHTML = story
+    if (noun && verb && adjective && adverb && pluralNoun){
+        
+        let story = ""
+        story = 'There are too many ' + pluralNoun + ' on this ' + noun + ' that are ' + verb + ' too loud. Someone please ' + verb + ' what your ' + verb + ' ah this sun is too ' + adjective + ', please someone do something about it ' + adverb
+        
+        madlibContent.innerText = story
+        
+    // } else {
+    //     messageElement.innerText = `please fill out the madlib`
+    }
 
  }
-
- function noInputs(){
-    // need to check if no inputs and empty form fields then dont generate the story
-
-    if(noun.value === "" && verb.value === "" && adjective.value === "" && adverb.value === "" && pluralNoun.value === ""){
-        renderError(`please enter a ${noun}, ${verb}, ${adjective}, ${adverb}, and a ${pluralNoun} please!`)
-        return
-    } 
-    
-}
-
-function renderError(error){
-    messageElement.className = "error"
-    messageElement.innerText = error
-}
 
  function resetStory(){ //reseting all the inputs to strings which essentially resets the story
     noun.value = ""
@@ -98,16 +89,20 @@ function renderError(error){
  }
 
 
+function generateRandom(choicesArr){
 
-// nounAmount = noun.length
+    let randomItem 
+    let randomIdx = 0
+    randomItem = choicesArr[Math.floor(Math.random() * choicesArr.length)] 
 
-// randomNoun = Math.floor(Math.random()* nounAmount)
+
+    return randomItem
+}
 
 
-
-// function autoFill(){
-
-// }
+function autoFill(){
+     console.log(generateRandom(nounList))
+}
 
 
 // function handleClick(){
