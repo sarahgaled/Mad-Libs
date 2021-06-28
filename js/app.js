@@ -46,23 +46,18 @@ const randomAdjective = document.querySelector("#random-adjective")
 const randomAdverb = document.querySelector("#random-adverb")
 const randomPluralNoun = document.querySelector("#random-plural-noun")
 const totallyRandom = document.querySelector("#totally-random-button")
-const friends = document.querySelector(".friends")
-const corporateAmerica = document.querySelector(".ca")
-const groceries = document.querySelector(".groceries")
-const parties = document.querySelector(".parties")
+const categoryContainer = document.querySelector('.category-container')
+const specialButton = document.getElementById('magic')
 /*----------------------------- Event Listeners -----------------------------*/
 
 // lightDarkBtn.addEventListener("click", colorScheme.change)
 
+specialButton.addEventListener('click', toggleVisibility)
 randomNoun.addEventListener('click', autoFillNoun)
 randomVerb.addEventListener('click', autoFillVerb)
 randomAdjective.addEventListener('click', autoFillAdjective)
 randomAdverb.addEventListener('click', autoFillAdverb)
 randomPluralNoun.addEventListener('click', autoFillPluralNoun)
-friends.addEventListener('click',)
-corporateAmerica.addEventListener('click',)
-groceries.addEventListener('click',)
-parties.addEventListener('click',)
 totallyRandom.addEventListener('click', totalAutoFill)
 libIt.addEventListener('click', generateStory)
 reset.addEventListener("click", resetStory)
@@ -138,23 +133,17 @@ function totalAutoFill() {
     pluralNoun.value = generateRandom(pluralNounList)
 }
 
-function categories(){
-    document.querySelector(".categories").style.display = "block"
-}
+// function categories(){
+//     categoryContainer.style.visibility = 'visible'
+// }
 
-function hideCategories(){
-    document.querySelector("Friends").onclick
-  
-        document.querySelector("Friends").style.display = "none"
-
-    document.querySelector("CA").onclick 
-
-        document.querySelector("CA").style.display = "none"
-
-    document.querySelector("Groceries").onclick 
-
-        document.querySelector("Groceries").style.display = "none";
-
+function toggleVisibility(){
+    categoryContainer.style.display= 'none'
+    if (categoryContainer.style.visibility === 'visible') {
+        categoryContainer.style.visibility = 'hidden'
+    } else {
+        categoryContainer.style.visibility = 'visible'
+    }
 
 }
 
