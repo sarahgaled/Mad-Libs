@@ -45,6 +45,7 @@ const randomVerb = document.querySelector("#random-verb")
 const randomAdjective = document.querySelector("#random-adjective")
 const randomAdverb = document.querySelector("#random-adverb")
 const randomPluralNoun = document.querySelector("#random-plural-noun")
+const totallyRandom = document.querySelector("#totally-random-button")
 /*----------------------------- Event Listeners -----------------------------*/
 
 // lightDarkBtn.addEventListener("click", colorScheme.change)
@@ -54,6 +55,7 @@ randomVerb.addEventListener('click', autoFillVerb)
 randomAdjective.addEventListener('click', autoFillAdjective)
 randomAdverb.addEventListener('click', autoFillAdverb)
 randomPluralNoun.addEventListener('click', autoFillPluralNoun)
+totallyRandom.addEventListener('click', totalAutoFill)
 libIt.addEventListener('click', generateStory)
 reset.addEventListener("click", resetStory)
 form.addEventListener("submit", function(evt){
