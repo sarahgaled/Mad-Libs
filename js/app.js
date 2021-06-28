@@ -51,9 +51,9 @@ const randomPluralNoun = document.querySelector("#random-plural-noun")
 
 randomNoun.addEventListener('click', autoFillNoun)
 randomVerb.addEventListener('click', autoFillVerb)
-randomAdjective.addEventListener('click', autoFillVerb)
-randomVerb.addEventListener('click', autoFillVerb)
-randomVerb.addEventListener('click', autoFillVerb)
+randomAdjective.addEventListener('click', autoFillAdjective)
+randomAdverb.addEventListener('click', autoFillAdverb)
+randomPluralNoun.addEventListener('click', autoFillPluralNoun)
 libIt.addEventListener('click', generateStory)
 reset.addEventListener("click", resetStory)
 form.addEventListener("submit", function(evt){
@@ -121,12 +121,12 @@ function autoFillAdverb(){
     adverb.value = generateRandom(adverbList)
 }
 
-function autoPluralNoun(){
+function autoFillPluralNoun(){
    
     pluralNoun.value = generateRandom(pluralNounList)
 }
 
-function totalAutoFill{
+function totalAutoFill(){
 
 }
 
