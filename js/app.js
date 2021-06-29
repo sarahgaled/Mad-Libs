@@ -12,7 +12,10 @@
 
 /*-------------------------------- Variables --------------------------------*/
 
-let player, submit, generate, story, selectedCategory
+let player, submit, generate, story
+
+let selectedCategory = ""
+
 
 let nounList = ['abandoned home', 'airfield', 'amusement park', 'antique shop', 'apple orchard', 'arena', 'auction house', 'Bangkok, Thailand', 'bathroom', 'bazaar', 'bridge', 'Cabo', 'cafeteria', 'cemetery', 'chamber', 'church', 'construction site', 'cornfield', 'courthouse', 'crack house', 'factory reset button', 'blood rage', 'idiot', 'toaster', 'legend', 'death wish', 'therapy', 'goal in life', 'marketing idea', 'psychic', 'knife', 'sandwich', 'hunting ground', 'lettuce', 'kitty', 'friendly grandma', 'french chef', 'antidepressant drug']
 
@@ -58,7 +61,6 @@ categoryContainer.style.display = 'visible'
 
 // lightDarkBtn.addEventListener("click", colorScheme.change)
 
-specialButton.addEventListener('click', toggleVisibility)
 randomNoun.addEventListener('click', autoFillNoun)
 randomVerb.addEventListener('click', autoFillVerb)
 randomAdjective.addEventListener('click', autoFillAdjective)
@@ -77,18 +79,35 @@ form.addEventListener("submit", generateStory)
 
 function generateStory(event) { //grab the input values to generate the story
     event.preventDefault()
+    console.log('running')
     let noun = document.getElementById('noun').value
     let verb = document.getElementById('verb').value
     let adjective = document.getElementById('adjective').value
     let adverb = document.getElementById('adverb').value
     let pluralNoun = document.getElementById('plural-noun').value
+    // console.log(setCategory())
 
     if (noun && verb && adjective && adverb && pluralNoun) {
 
-        let story = ""
-        story = `There are too many ${pluralNoun} on this ${noun} that are ${verb} too loud. Someone please ${verb} what your ${verb}  ah this sun is too ${adjective}, please someone do something about it ${adverb}`
+        if (selectedCategory === 'groceries'){
+            madlibContent.innerText = `Groceries are ${noun} and I can't ${adjective} them ${verb} enough`
+        }
+        if (selectedCategory === 'parties'){
+            madlibContent.innerText = `Parties are ${noun} and I can't ${adjective} them ${verb} enough`
+        }
+    
+        if (selectedCategory === 'friends'){
+            madlibContent.innerText = `Friends are ${noun} and I can't ${adjective} them ${verb} enough`
+        }
+    
+        if (selectedCategory === 'ca'){
+            madlibContent.innerText = `Corporate America are ${noun} and I can't ${adjective} them ${verb} enough`
 
-        madlibContent.innerText = story
+        } if (selectedCategory === "") {
+            madlibContent.innerText = `There are too many ${pluralNoun} on this ${noun} that are ${verb} too loud. Someone please ${verb} what your ${verb}  ah this sun is too ${adjective}, please someone do something about it ${adverb}`
+        }
+        
+        // madlibContent.innerText = story
 
         // } else {
         //     messageElement.innerText = `please fill out the madlib`
@@ -145,33 +164,19 @@ function totalAutoFill() {
 
 function toggleVisibility(){
   
-    if (categoryContainer.style.display === 'visible') {
-        categoryContainer.style.display = 'hidden'
-    } else {
-        categoryContainer.style.display = 'visible'
-    }
-
+    // if (categoryContainer.style.visibility === 'visible') {
+    // } else {
+        categoryContainer.style.visibility = 'visible'
+    // }
+    
 }
 
 function setCategory(evt){   
     
     selectedCategory = evt.target.id
     console.log(selectedCategory)
-    if (selectedCategory === 'groceries'){
-        return `Groceries are ${noun} and I can't ${adjective} them ${verb} enough`
-    }
-    if (selectedCategory === 'parties'){
-        return `Parties are ${noun} and I can't ${adjective} them ${verb} enough`
-    }
-
-    if (selectedCategory === 'friends'){
-        return `Friends are ${noun} and I can't ${adjective} them ${verb} enough`
-    }
-
-    if (selectedCategory === 'ca'){
-        return `Corporate America are ${noun} and I can't ${adjective} them ${verb} enough`
-    }
-
+    categoryContainer.style.visibility = 'hidden'
+    
 }
 
 
