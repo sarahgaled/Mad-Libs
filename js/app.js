@@ -119,6 +119,8 @@ function resetStory() { //reseting all the inputs to strings which essentially r
     pluralNoun.value = ""
 
     madlibContent.innerHTML = ""
+
+    toggleVisibility()
 }
 
 function generateRandom(choicesArr) {
@@ -164,6 +166,7 @@ function toggleVisibility(){
     // } else {
         categoryContainer.style.visibility = 'visible'
     // }
+    console.log(`visibility is ${categoryContainer.style.visibility}`)
     
 }
 
