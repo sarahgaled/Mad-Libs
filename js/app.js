@@ -12,7 +12,7 @@
 
 /*-------------------------------- Variables --------------------------------*/
 
-let player, submit, generate, story
+let story
 
 let selectedCategory = ""
 
@@ -85,7 +85,7 @@ function generateStory(event) { //grab the input values to generate the story
     let adjective = document.getElementById('adjective').value
     let adverb = document.getElementById('adverb').value
     let pluralNoun = document.getElementById('plural-noun').value
-    // console.log(setCategory())
+
 
     if (noun && verb && adjective && adverb && pluralNoun) {
 
@@ -107,10 +107,6 @@ function generateStory(event) { //grab the input values to generate the story
             madlibContent.innerText = `There are too many ${pluralNoun} on this ${noun} that are ${verb} too loud. Someone please ${verb} what your ${verb}  ah this sun is too ${adjective}, please someone do something about it ${adverb}`
         }
         
-        // madlibContent.innerText = story
-
-        // } else {
-        //     messageElement.innerText = `please fill out the madlib`
     }
 
 }
