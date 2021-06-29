@@ -12,7 +12,7 @@
 
 /*-------------------------------- Variables --------------------------------*/
 
-let player, submit, generate, story
+let player, submit, generate, story, selectedCategory
 
 let nounList = ['abandoned home', 'airfield', 'amusement park', 'antique shop', 'apple orchard', 'arena', 'auction house', 'Bangkok, Thailand', 'bathroom', 'bazaar', 'bridge', 'Cabo', 'cafeteria', 'cemetery', 'chamber', 'church', 'construction site', 'cornfield', 'courthouse', 'crack house', 'factory reset button', 'blood rage', 'idiot', 'toaster', 'legend', 'death wish', 'therapy', 'goal in life', 'marketing idea', 'psychic', 'knife', 'sandwich', 'hunting ground', 'lettuce', 'kitty', 'friendly grandma', 'french chef', 'antidepressant drug']
 
@@ -33,7 +33,7 @@ let pluralNounList = ['axes', 'heroes', 'crises', 'businesses', 'viruses', 'phen
 const madlibContent = document.getElementById("madlib-content")
 const libIt = document.querySelector(".generate-madlib")
 const reset = document.querySelector(".reset")
-const form = document.querySelector(".input-text")
+const form = document.querySelector("#form")
 const noun = document.querySelector("#noun")
 const verb = document.querySelector("#verb")
 const adjective = document.querySelector("#adjective")
@@ -64,21 +64,19 @@ randomVerb.addEventListener('click', autoFillVerb)
 randomAdjective.addEventListener('click', autoFillAdjective)
 randomAdverb.addEventListener('click', autoFillAdverb)
 randomPluralNoun.addEventListener('click', autoFillPluralNoun)
-friends.addEventListener('click', toggleVisibility)
-corporateAmerica.addEventListener('click', toggleVisibility)
-groceries.addEventListener('click', toggleVisibility)
-parties.addEventListener('click', toggleVisibility)
+friends.addEventListener('click', setCategory)
+corporateAmerica.addEventListener('click', setCategory)
+groceries.addEventListener('click', setCategory)
+parties.addEventListener('click', setCategory)
 totallyRandom.addEventListener('click', totalAutoFill)
 libIt.addEventListener('click', generateStory)
 reset.addEventListener("click", resetStory)
-form.addEventListener("submit", function (evt) {
-    evt.preventDefault()
-})
+form.addEventListener("submit", generateStory)
 /*-------------------------------- Functions --------------------------------*/
 
 
-function generateStory() { //grab the input values to generate the story
-
+function generateStory(event) { //grab the input values to generate the story
+    event.preventDefault()
     let noun = document.getElementById('noun').value
     let verb = document.getElementById('verb').value
     let adjective = document.getElementById('adjective').value
@@ -143,12 +141,10 @@ function totalAutoFill() {
     pluralNoun.value = generateRandom(pluralNounList)
 }
 
-// function categories(){
-//     categoryContainer.style.visibility = 'visible'
-// }
+
 
 function toggleVisibility(){
-    //categoryContainer.style.display= 'none'
+  
     if (categoryContainer.style.display === 'visible') {
         categoryContainer.style.display = 'hidden'
     } else {
@@ -157,6 +153,28 @@ function toggleVisibility(){
 
 }
 
-// function handleClick(){
+function setCategory(evt){   
+    
+    selectedCategory = evt.target.id
+    console.log(selectedCategory)
+    if (selectedCategory === 'groceries'){
+        return `Groceries are ${noun} and I can't ${adjective} them ${verb} enough`
+    }
+    if (selectedCategory === 'parties'){
+        return `Parties are ${noun} and I can't ${adjective} them ${verb} enough`
+    }
 
-// }
+    if (selectedCategory === 'friends'){
+        return `Friends are ${noun} and I can't ${adjective} them ${verb} enough`
+    }
+
+    if (selectedCategory === 'ca'){
+        return `Corporate America are ${noun} and I can't ${adjective} them ${verb} enough`
+    }
+
+}
+
+
+
+
+  //categoryContainer.style.display= 'none'
