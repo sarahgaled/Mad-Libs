@@ -42,6 +42,18 @@ body{
     background-color: var(--body-bg);
   }
   
+button{
+    margin: 22px 0;
+    display: block;
+}
+
+input{
+    margin: 10px 0;
+}
+
+header{
+    display: flex;
+}
 
 
 .madlib-container{
@@ -50,42 +62,20 @@ body{
     margin: 30px;
 }
 
-.generate-madlib{
-    position: fixed;
-    right: 1130px;
-
-}
-
 .buttons > .reset{
     position: absolute;
     bottom: 10%;
     right:50%;
 }
 
-.random-word{
-    display: block;
-}
 
-.buttons{
-    margin: 1.5rem;
-}
 
-.generate-madlib{
-    margin: 40px;
-    margin-right: 10px;
-}
 
 .category-container{
     display: flex;
-    flex-direction: row-reverse;
+    margin-left: auto;
 }
 
-#light-dark-button{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-
-}
 
 #form{
     margin: 5px 5px 5px 5px;

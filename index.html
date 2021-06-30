@@ -11,7 +11,19 @@
 </head>
 
 <body>
-    <h1>Adult Mad Libs</h1>
+    <header>
+        <h1>Adult Mad Libs</h1>
+        <button id="light-dark-button" class="btn">Light/Dark</button>
+        <div class="category-container">
+            <button id="friends" class="friends">Friends</button>
+                    <button id="ca" class="ca">Corporate America</button>
+                            <button id="groceries" class="groceries">Groceries</button>
+                                    <button id="parties" class="parties">Parties</button>
+    
+        </div>
+    </header>
+    
+
 
     <div class="madlib-container">
         <form id="form" class="input-text">
@@ -21,9 +33,8 @@
             <input id="adjective" type="text" placeholder="adjective"><br />
             <input id="adverb" type="text" placeholder="adverb"><br />
             <input id="plural-noun" type="text" placeholder="plural noun"><br />
-            <button class="generate-madlib" type="submit">Lib it</button>
         </form>
-
+        
         <div class='buttons'>
             <button class="reset" type="reset">Reset</button>
             <button id="random-noun" class="random-word">Random</button>
@@ -32,18 +43,11 @@
             <button id="random-adverb" class="random-word">Random</button>
             <button id="random-plural-noun" class="random-word">Random</button>
             <button id="totally-random-button" class="totally-random">Totally Random</button>
-            <button id="light-dark-button" class="btn">Light/Dark</button>
+            <button class="generate-madlib" type="submit">Lib it</button>
 
         </div>
     </div>
 
-    <div class="category-container">
-        <button id="friends" class="friends">Friends<button>
-                <button id="ca" class="ca">Corporate America<button>
-                        <button id="groceries" class="groceries">Groceries<button>
-                                <button id="parties" class="parties">Parties<button>
-
-    </div>
     <p id="madlib-content"></p>
 </body>
 
