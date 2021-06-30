@@ -43,12 +43,12 @@ body{
   }
   
 button{
-    margin: 22px 0;
+    margin: 15px;
     display: block;
 }
 
 input{
-    margin: 10px 0;
+    margin: 10px ;
 }
 
 header{
@@ -68,9 +68,6 @@ header{
     right:50%;
 }
 
-
-
-
 .category-container{
     display: flex;
     margin-left: auto;
@@ -78,7 +75,7 @@ header{
 
 
 #form{
-    margin: 5px 5px 5px 5px;
+    display: block;
 }
 
 @media only screen and (min-width: 768px) {
