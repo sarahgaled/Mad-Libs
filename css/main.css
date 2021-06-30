@@ -67,7 +67,7 @@ body{
 }
 
 .buttons{
-    margin: 3.5rem;
+    margin: 1.5rem;
 }
 
 .generate-madlib{
@@ -91,4 +91,10 @@ body{
     margin: 5px 5px 5px 5px;
 }
 
+@media only screen and (min-width: 768px) {
+    .form{
+      width: 325px;
+      margin: 30px 15px 0;
+    }
+  }
 
