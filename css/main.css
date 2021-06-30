@@ -63,11 +63,11 @@ body{
 }
 
 .random-word{
-    /* display: block; */
+    display: block;
 }
 
 .buttons{
-    margin: 1.5rem;
+    margin: 3.5rem;
 }
 
 .generate-madlib{
