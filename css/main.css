@@ -6,6 +6,76 @@ body{
     
 }
 
+:root {
+    font-size: 62.5%;
+    --cursive: 'Dancing Script', cursive;
+    --serif: 'Playfair Display', serif;
+  }
+  
+  body {
+
+    --body-bg: #8a8b9b;
+    --btn-text-color: #2a2a2a;
+    --card-text-color: 3e3e3e;
+    --header-bg: #007bbe;
+    --header-text-color: #d8d8d8;
+  --inverted-btn-text-color: #eaeaea;
+  --light-dark-btn-bg: linear-gradient(
+    to right top,
+    #22232b,
+    #292b3a,
+    #303241,
+    #373949,
+    #3e4050,
+    #454757,
+    #4b4d5d,
+    #525464,
+    #5a5c6c,
+    #616374,
+    #696b7d,
+    #717385
+  );
+  --light-dark-btn-content: "Dark Mode";
+  
+    background-color: var(--body-bg);
+    /* Use a system font, if none are available use an available sans-sarif font */
+    display: flex;
+    flex-direction: column;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    margin: 0;
+    align-items: center;
+  }
+
+  body.dark {
+    --body-bg: #22232b;
+    --btn-text-color: #eaeaea;
+    --card-text-color: #dedede;
+    --header-bg: #005e9d;
+    --header-text-color: #d8d8d8;
+    --inverted-btn-text-color: #2a2a2a;
+    --light-dark-btn-bg: linear-gradient(
+      to right top,
+      #444655,
+      #595b6b,
+      #6f7181,
+      #868898,
+      #9ea0b0,
+      #acaebe,
+      #bbbccd,
+      #cacbdc,
+      #d2d4e5,
+      #dadced,
+      #e3e5f6,
+      #ebeeff
+    );
+    --light-dark-btn-content: "Light Mode";
+   
+    background-color: var(--body-bg);
+  }
+  
+
+
 .madlib-container{
     display: flex;
     justify-content: flex-start;

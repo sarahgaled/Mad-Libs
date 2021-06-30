@@ -1,14 +1,14 @@
 /*-------------------------------- Constants --------------------------------*/
 
-// const colorScheme = {
-//     dark: "",
-//     change: function(){
-//         console.log(colorScheme.dark)
-//         colorScheme.dark = colorScheme.dark ? "" : "dark"
-//         document.querySelector("body").setAttribute("class", colorScheme.dark)
-//         console.log(colorScheme.dark)
-//     }
-// }
+const colorScheme = {
+    dark: "",
+    change: function(){
+        console.log(colorScheme.dark)
+        colorScheme.dark = colorScheme.dark ? "" : "dark"
+        document.querySelector("body").setAttribute("class", colorScheme.dark)
+        console.log(colorScheme.dark)
+    }
+}
 
 /*-------------------------------- Variables --------------------------------*/
 
@@ -55,6 +55,7 @@ const friends = document.querySelector(".friends")
 const corporateAmerica = document.querySelector(".ca")
 const groceries = document.querySelector(".groceries")
 const parties = document.querySelector(".parties")
+const lightDarkBtn = document.querySelector("#light-dark-button")
 categoryContainer.style.display = 'visible'
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -74,8 +75,18 @@ totallyRandom.addEventListener('click', totalAutoFill)
 libIt.addEventListener('click', generateStory)
 reset.addEventListener("click", resetStory)
 form.addEventListener("submit", generateStory)
+lightDarkBtn.addEventListener("click", colorScheme.change)
 /*-------------------------------- Functions --------------------------------*/
 
+checkUserColorSchemePreference()
+
+function checkUserColorSchemePreference(){
+    if(
+        window.matchMedia("(prefers-color-scheme:dark").matches && !colorScheme.dark
+    ){
+        colorScheme.change()
+    }
+}
 
 function generateStory(event) { //grab the input values to generate the story
     event.preventDefault()
