@@ -19,4 +19,4 @@ Technologies and sites used: html, css, javascript, google fonts, animate.css
 Pictures of your game on the web here
 Pictures of your game in mobile view here
 
-Next steps:
+Next steps: mobile design
