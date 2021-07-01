@@ -51,10 +51,10 @@ const randomPluralNoun = document.querySelector("#random-plural-noun")
 const totallyRandom = document.querySelector("#totally-random-button")
 const categoryContainer = document.querySelector('.category-container')
 const specialButton = document.getElementById('magic')
-const friends = document.querySelector(".friends")
-const corporateAmerica = document.querySelector(".ca")
-const groceries = document.querySelector(".groceries")
-const parties = document.querySelector(".parties")
+const marriage = document.querySelector(".marriage")
+const newYork = document.querySelector(".new-york")
+const dating = document.querySelector(".dating")
+const adultHood = document.querySelector(".adulthood")
 const lightDarkBtn = document.querySelector("#light-dark-button")
 categoryContainer.style.display = 'visible'
 
@@ -67,10 +67,10 @@ randomVerb.addEventListener('click', autoFillVerb)
 randomAdjective.addEventListener('click', autoFillAdjective)
 randomAdverb.addEventListener('click', autoFillAdverb)
 randomPluralNoun.addEventListener('click', autoFillPluralNoun)
-friends.addEventListener('click', setCategory)
-corporateAmerica.addEventListener('click', setCategory)
-groceries.addEventListener('click', setCategory)
-parties.addEventListener('click', setCategory)
+marriage.addEventListener('click', setCategory)
+newYork.addEventListener('click', setCategory)
+dating.addEventListener('click', setCategory)
+adultHood.addEventListener('click', setCategory)
 totallyRandom.addEventListener('click', totalAutoFill)
 libIt.addEventListener('click', generateStory)
 reset.addEventListener("click", resetStory)
@@ -100,26 +100,24 @@ function generateStory(event) { //grab the input values to generate the story
 
     if (noun && verb && adjective && adverb && pluralNoun) {
 
-        if (selectedCategory === 'groceries'){
-            madlibContent.innerText = `Oh, the ${noun} outside is ${adjective}, But the ${noun} is so ${adjective}, and since we've no place to ${verb}, Let it snow, let it snow, let it snow`
+        if (selectedCategory === 'dating'){
+            madlibContent.innerText = `I went on a date in ${noun} and it was interestingly ${adjective}. The guy couldn't stop ${verb} and ${adverb} too! Dating ${pluralNoun} is weak.`
         }
-        if (selectedCategory === 'parties'){
-            madlibContent.innerText = `Parties are ${noun} and I can't ${adjective} them ${verb} enough`
-        }
-    
-        if (selectedCategory === 'friends'){
-            madlibContent.innerText = `Friends are ${noun} and I can't ${adjective} them ${verb} enough`
+        if (selectedCategory === 'marriage'){
+            madlibContent.innerText = `Marriage is like ${noun}, it's all ${noun} until you realize you made the biggest mistake by ${verb} this shmuck. Just the thought of adverb makes you nauseous.`
         }
     
-        if (selectedCategory === 'ca'){
-            madlibContent.innerText = `Corporate America are ${noun} and I can't ${adjective} them ${verb} enough`
-
+        if (selectedCategory === 'adulthood'){
+            madlibContent.innerText = `There is nothing like a adulthood. Everyone tells you it's going to be ${noun} and ${adjective}. But then you start ${verb} and ${adverb} and you realize all ${pluralNoun}s were wrong. Adulthood sucks.`
+        }
+    
+        if (selectedCategory === 'new-york'){
+            madlibContent.innerText = `New York is filled with ${noun}s and ${adjective}s who like to ${verb} and ${adverb} all over the place with ${pluralNoun}`
+            
         } if (selectedCategory === "") {
-            madlibContent.innerText = `There are too many ${pluralNoun} on this ${noun} that are ${verb} too loud. Someone please ${verb} what your ${verb}  ah this sun is too ${adjective}, please someone do something about it ${adverb}`
-        }
-        
+            madlibContent.innerText = `Getting into a car accident is like ${noun}. You feel like ${verb} and ${adjective} and hope ${pluralNoun} is okay.`
+        }  
     }
-
 }
 
 function resetStory() { //reseting all the inputs to strings which essentially resets the story
