@@ -7,24 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adult Mad Libs!</title>
     <script defer src="./js/app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap" rel="stylesheet">
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
     <header>
-        <h1>Adult Mad Libs</h1>
-        <button id="light-dark-button" class="btn">Light/Dark</button>
+        <div id="wrapper">
+            <h1 class="animate__animated animate__backInLeft">Adult Mad Libs</h1>
+            <button id="light-dark-button" class="btn">Light/Dark</button>
+        </div>
         <div class="category-container">
             <button id="friends" class="friends">Friends</button>
-                    <button id="ca" class="ca">Corporate America</button>
-                            <button id="groceries" class="groceries">Groceries</button>
-                                    <button id="parties" class="parties">Parties</button>
-    
+            <button id="ca" class="ca">Corporate America</button>
+            <button id="groceries" class="groceries">Groceries</button>
+            <button id="parties" class="parties">Parties</button>
+            
         </div>
     </header>
     
-
-
+    
+    
     <div class="madlib-container">
         <form id="form" class="input-text">
             <h4 id="message"></h4>
@@ -44,11 +53,15 @@
             <button id="random-plural-noun" class="random-word">Random</button>
             <button id="totally-random-button" class="totally-random">Totally Random</button>
             <button class="generate-madlib" type="submit">Lib it</button>
-
+            
+            
         </div>
     </div>
 
     <p id="madlib-content"></p>
+
+    <div>
+    </div>
 </body>
 
 </html>

@@ -1,15 +1,6 @@
-body{
-    background-color: beige;
-    color: black;
-    margin-top: 50px;
-    text-align: center;
-    
-}
-
 :root {
     font-size: 62.5%;
-    --cursive: 'Dancing Script', cursive;
-    --serif: 'Playfair Display', serif;
+    --cool-font: 'Big Shoulders Display', cursive;
   }
   
   body {
@@ -25,8 +16,7 @@ body{
     /* Use a system font, if none are available use an available sans-sarif font */
     display: flex;
     flex-direction: column;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-family: 'Big Shoulders Display', cursive;
     margin: 0;
     /* align-items: center; */
   }
@@ -45,6 +35,7 @@ body{
 button{
     margin: 15px;
     display: block;
+
 }
 
 input{
@@ -53,6 +44,13 @@ input{
 
 header{
     display: flex;
+}
+
+
+h1{
+    margin-left: 15px;
+    font-size: 80px;
+    animation-name: backInLeft;
 }
 
 
@@ -71,8 +69,21 @@ header{
 .category-container{
     display: flex;
     margin-left: auto;
+    height: 70px;
+
 }
 
+#wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; 
+  }
+
+/* #light-dark-button{
+    height: 40px;
+    position: absolute;
+    bottom: 5%;
+} */
 
 #form{
     display: block;

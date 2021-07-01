@@ -9,3 +9,4 @@ Step 6: think of funny plural nouns and input them in the plural nouns input box
 Step 7: or you can choose to press the "random" button that will generate a random noun/verb/adverb etc... for you.
 Step 8: or you can choose to press the "totally random" button that will randomly generate all the variables and randomly generate a story
 Step 9: laugh
+
