@@ -1,6 +1,6 @@
 <Adult Mad Libs>: players, fill in the blanks with adjectives, nouns, verbs, and more. These words are inserted into the blanks and then the story is read aloud to receive hilarious results. There are no winners or losers, only laughter. This was my favorite childhood came and it always made me laugh so that is why I chose to build this game.
 
-
+getting started:
 Step 1: pick a category
 Step 2: think of funny nouns and input them in the noun input box
 Step 3: think of funny verbs and input them in the verb input box

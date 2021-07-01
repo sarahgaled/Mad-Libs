@@ -8,12 +8,9 @@
     <title>Adult Mad Libs!</title>
     <script defer src="./js/app.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap" rel="stylesheet">
-<link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
@@ -28,35 +25,39 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
             <button id="new-york" class="new-york">New York</button>
             <button id="dating" class="dating">Dating</button>
             <button id="adulthood" class="adulthood">Adulthood</button>
-            
+
         </div>
     </header>
-    
+
     <div class="madlib-container">
         <form id="form" class="input-text">
             <h4 id="message"></h4>
-            <input id="noun" type="text" placeholder="noun"><br />
-            <input id="verb" type="text" placeholder="verb"><br />
-            <input id="adjective" type="text" placeholder="adjective"><br />
-            <input id="adverb" type="text" placeholder="adverb"><br />
-            <input id="plural-noun" type="text" placeholder="plural noun"><br />
-        </form>
-        
-        <div class='buttons'>
-            <button class="reset" type="reset">Reset</button>
-            <button id="random-noun" class="random-word">Random</button>
-            <button id="random-verb" class="random-word">Random</button>
-            <button id="random-adjective" class="random-word">Random</button>
-            <button id="random-adverb" class="random-word">Random</button>
-            <button id="random-plural-noun" class="random-word">Random</button>
-            <button id="totally-random-button" class="totally-random">Totally Random</button>
-            <button class="generate-madlib" type="submit">Lib it</button>
-            
-            
-    <div>
-        <p id="madlib-content"></p>
-    </div>
+            <input id="noun" type="text" placeholder="noun">
+            <button id="random-noun" class="random-word">Random</button><br/>
+            <input id="verb" type="text" placeholder="verb">
+            <button id="random-verb" class="random-word">Random</button><br/>
+            <input id="adjective" type="text" placeholder="adjective">
+            <button id="random-adjective" class="random-word">Random</button><br/>
+            <input id="adverb" type="text" placeholder="adverb">
+            <button id="random-adverb" class="random-word">Random</button><br/>
+            <input id="plural-noun" type="text" placeholder="plural noun">
+            <button id="random-plural-noun" class="random-word">Random</button><br/>
 
+            <div class="bottom-btns">
+                <button id="totally-random-button">Totally Random</button>
+                <button id="generate-madlib" class="generate-madlib" type="submit">Lib it</button>
+                <button class="reset" type="reset">Reset</button>
+
+            </div>
+
+        </form>
+
+        
+        
+        <div id="madlib-content">
+        
+        </div>
+        </div>
 </body>
 
 </html>

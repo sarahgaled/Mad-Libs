@@ -82,7 +82,7 @@ checkUserColorSchemePreference()
 
 function checkUserColorSchemePreference(){
     if(
-        window.matchMedia("(prefers-color-scheme:dark").matches && !colorScheme.dark
+        window.matchMedia("(prefers-color-scheme:dark)").matches && !colorScheme.dark
     ){
         colorScheme.change()
     }
@@ -98,7 +98,7 @@ function generateStory(event) { //grab the input values to generate the story
     let pluralNoun = document.getElementById('plural-noun').value
 
 
-    if (noun && verb && adjective && adverb && pluralNoun) {
+    if (noun && verb && adjective && adverb && pluralNoun && event.target.id === 'generate-madlib') {
 
         if (selectedCategory === 'dating'){
             madlibContent.innerText = `I went on a date in ${noun} and it was interestingly ${adjective}. The guy couldn't stop ${verb} and ${adverb} too! Dating ${pluralNoun} is weak.`
@@ -114,8 +114,9 @@ function generateStory(event) { //grab the input values to generate the story
         if (selectedCategory === 'new-york'){
             madlibContent.innerText = `New York is filled with ${noun}s and ${adjective}s who like to ${verb} and ${adverb} all over the place with ${pluralNoun}`
             
-        } if (selectedCategory === "") {
+        } if (selectedCategory === "" ) {
             madlibContent.innerText = `Getting into a car accident is like ${noun}. You feel like ${verb} and ${adjective} and hope ${pluralNoun} is okay.`
+            categoryContainer.style.visibility = 'hidden'
         }  
     }
 }
@@ -128,6 +129,8 @@ function resetStory() { //reseting all the inputs to strings which essentially r
     pluralNoun.value = ""
 
     madlibContent.innerHTML = ""
+
+    selectedCategory = ""
 
     toggleVisibility()
 }

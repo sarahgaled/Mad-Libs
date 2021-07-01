@@ -1,3 +1,4 @@
+
 :root {
     font-size: 62.5%;
     --cool-font: 'Big Shoulders Display', cursive;
@@ -56,21 +57,37 @@ h1{
 
 .madlib-container{
     display: flex;
-    justify-content: flex-start;
-    margin: 30px;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
-.buttons > .reset{
-    position: absolute;
-    bottom: 10%;
-    right:50%;
-}
 
 .category-container{
     display: flex;
     margin-left: auto;
     height: 70px;
 
+}
+
+.random-word{
+   
+    
+    display: inline-block;
+}
+
+.bottom-btns{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    width: 90%;
+    padding: 10px;
+
+}
+
+.bottom-btns > button{
+    width: 100%;
+    margin-top: 10px;
 }
 
 #wrapper{
@@ -84,8 +101,9 @@ h1{
     justify-content: center;
     text-align: center;
     align-items: center;
-    /* margin: 100px; */
+    width: 50%;
     font-size: 40px;
+    margin-left: 300px;
 }
 
 /* #light-dark-button{
@@ -96,6 +114,9 @@ h1{
 
 #form{
     display: block;
+    width: fit-content;
+    position: absolute;
+    left: 0;
 }
 
 /* @media only screen and (min-width: 768px) {
