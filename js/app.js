@@ -104,7 +104,7 @@ function generateStory(event) { //grab the input values to generate the story
             madlibContent.innerText = `I went on a date in ${noun} and it was interestingly ${adjective}. The guy couldn't stop ${verb} and ${adverb} too! Dating ${pluralNoun} is weak.`
         }
         if (selectedCategory === 'marriage'){
-            madlibContent.innerText = `Marriage is like ${noun}, it's all ${noun} until you realize you made the biggest mistake by ${verb} this shmuck. Just the thought of adverb makes you nauseous.`
+            madlibContent.innerText = `Marriage is like ${noun}, it's all ${noun} until you realize you made the biggest mistake by ${verb} this shmuck. Just the thought of ${adverb} makes you nauseous.`
         }
     
         if (selectedCategory === 'adulthood'){
