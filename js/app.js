@@ -101,7 +101,7 @@ function generateStory(event) { //grab the input values to generate the story
     if (noun && verb && adjective && adverb && pluralNoun) {
 
         if (selectedCategory === 'groceries'){
-            madlibContent.innerText = `Groceries are ${noun} and I can't ${adjective} them ${verb} enough`
+            madlibContent.innerText = `Oh, the ${noun} outside is ${adjective}, But the ${noun} is so ${adjective}, and since we've no place to ${verb}, Let it snow, let it snow, let it snow`
         }
         if (selectedCategory === 'parties'){
             madlibContent.innerText = `Parties are ${noun} and I can't ${adjective} them ${verb} enough`
