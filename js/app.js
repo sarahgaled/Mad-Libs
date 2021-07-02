@@ -2,7 +2,7 @@
 
 const colorScheme = {
     dark: "",
-    change: function(){
+    change: function () {
         console.log(colorScheme.dark)
         colorScheme.dark = colorScheme.dark ? "" : "dark"
         document.querySelector("body").setAttribute("class", colorScheme.dark)
@@ -51,16 +51,16 @@ const randomPluralNoun = document.querySelector("#random-plural-noun")
 const totallyRandom = document.querySelector("#totally-random-button")
 const categoryContainer = document.querySelector('.category-container')
 const specialButton = document.getElementById('magic')
-const marriage = document.querySelector(".marriage")
-const newYork = document.querySelector(".new-york")
-const dating = document.querySelector(".dating")
-const adultHood = document.querySelector(".adulthood")
+const marriage = document.querySelector("#marriage")
+const newYork = document.querySelector("#new-york")
+const dating = document.querySelector("#dating")
+const adultHood = document.querySelector("#adulthood")
 const lightDarkBtn = document.querySelector("#light-dark-button")
 categoryContainer.style.display = 'visible'
+const marriageAudio = new Audio("../music/MarriageCategory.mp3")
+const newYorkAudio = new Audio("../music/NewYorkAudio.mp3")
 
 /*----------------------------- Event Listeners -----------------------------*/
-
-// lightDarkBtn.addEventListener("click", colorScheme.change)
 
 randomNoun.addEventListener('click', autoFillNoun)
 randomVerb.addEventListener('click', autoFillVerb)
@@ -76,17 +76,26 @@ libIt.addEventListener('click', generateStory)
 reset.addEventListener("click", resetStory)
 form.addEventListener("submit", generateStory)
 lightDarkBtn.addEventListener("click", colorScheme.change)
+// lightDarkBtn.addEventListener("click", changeTheme)
 /*-------------------------------- Functions --------------------------------*/
 
 checkUserColorSchemePreference()
 
-function checkUserColorSchemePreference(){
-    if(
+function checkUserColorSchemePreference() {
+    if (
         window.matchMedia("(prefers-color-scheme:dark)").matches && !colorScheme.dark
-    ){
+    ) {
         colorScheme.change()
+        const buttons = document.querySelectorAll("button")
+        buttons.classList.toggle('dark')
     }
 }
+
+// function changeTheme(){
+//     categoryBtns.classList.add("dark")
+//     buttons.classList.add("dark")
+//     document.body.classList.add('dark')
+// }
 
 function generateStory(event) { //grab the input values to generate the story
     event.preventDefault()
@@ -99,25 +108,36 @@ function generateStory(event) { //grab the input values to generate the story
 
 
     if (noun && verb && adjective && adverb && pluralNoun && event.target.id === 'generate-madlib') {
-
-        if (selectedCategory === 'dating'){
+        madlibContent.classList.add("animate__animated", "animate__rotateIn")
+        if (selectedCategory === 'dating') {
+            // madlibContent.classList.add("animate__animated", "animate__rotateIn")
             madlibContent.innerText = `I went on a date in ${noun} and it was interestingly ${adjective}. The guy couldn't stop ${verb} and ${adverb} too! Dating ${pluralNoun} is weak.`
         }
-        if (selectedCategory === 'marriage'){
+        if (selectedCategory === 'marriage') {
+            // madlibContent.classList.add("animate__animated", "animate__rotateIn")
             madlibContent.innerText = `Marriage is like ${noun}, it's all ${noun} until you realize you made the biggest mistake by ${verb} this shmuck. Just the thought of ${adverb} makes you nauseous.`
+            marriageAudio.play()
+            marriageAudio.volume = .3
+            setTimeout(() => marriageAudio.pause(), 7000)
         }
-    
-        if (selectedCategory === 'adulthood'){
+
+        if (selectedCategory === 'adulthood') {
+            // madlibContent.classList.add("animate__animated", "animate__rotateIn")
             madlibContent.innerText = `There is nothing like a adulthood. Everyone tells you it's going to be ${noun} and ${adjective}. But then you start ${verb} and ${adverb} and you realize all ${pluralNoun}s were wrong. Adulthood sucks.`
         }
-    
-        if (selectedCategory === 'new-york'){
+
+        if (selectedCategory === 'new-york') {
+            // madlibContent.classList.add("animate__animated", "animate__rotateIn")
             madlibContent.innerText = `New York is filled with ${noun}s and ${adjective}s who like to ${verb} and ${adverb} all over the place with ${pluralNoun}`
-            
-        } if (selectedCategory === "" ) {
+            newYorkAudio.play()
+            newYorkAudio.volume = .3
+            setTimeout(() => newYorkAudio.pause(), 7000)
+
+        } if (selectedCategory === "") {
+            // madlibContent.classList.add("animate__animated", "animate__rotateIn")
             madlibContent.innerText = `Getting into a car accident is like ${noun}. You feel like ${verb} and ${adjective} and hope ${pluralNoun} is okay.`
             categoryContainer.style.visibility = 'hidden'
-        }  
+        }
     }
 }
 
@@ -131,6 +151,11 @@ function resetStory() { //reseting all the inputs to strings which essentially r
     madlibContent.innerHTML = ""
 
     selectedCategory = ""
+
+    madlibContent.classList.remove("animate__animated", "animate__rotateIn")
+
+    marriageAudio.pause()
+    newYorkAudio.pause()
 
     toggleVisibility()
 }
@@ -172,24 +197,26 @@ function totalAutoFill() {
 
 
 
-function toggleVisibility(){
-  
+function toggleVisibility() {
+
     // if (categoryContainer.style.visibility === 'visible') {
     // } else {
-        categoryContainer.style.visibility = 'visible'
+    categoryContainer.style.visibility = 'visible'
     // }
     console.log(`visibility is ${categoryContainer.style.visibility}`)
-    
+
 }
 
-function setCategory(evt){   
-    
+function setCategory(evt) {
+
     selectedCategory = evt.target.id
     console.log(selectedCategory)
     categoryContainer.style.visibility = 'hidden'
-    
-}
 
+
+
+
+}
 
 
 

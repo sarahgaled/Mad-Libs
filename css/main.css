@@ -1,18 +1,11 @@
-
 :root {
-    font-size: 62.5%;
-    --cool-font: 'Big Shoulders Display', cursive;
-  }
-  
-  body {
-
     --body-bg: #FFAD05;
-    --btn-text-color: #2a2a2a;
-    --header-bg: #007bbe;
-    --header-text-color: #d8d8d8;
-  --inverted-btn-text-color: #eaeaea;
-  --light-dark-btn-content: "Dark Mode";
-  
+    --btn-text-color: black;
+    --btn-color: linear-gradient(315deg, #d27127, #f9862e);
+}
+
+body {
+
     background-color: var(--body-bg);
     /* Use a system font, if none are available use an available sans-sarif font */
     display: flex;
@@ -20,83 +13,113 @@
     font-family: 'Big Shoulders Display', cursive;
     margin: 0;
     /* align-items: center; */
-  }
+}
 
-  body.dark {
-    --body-bg: #C84C09;
-    --btn-text-color: #eaeaea;
-    --header-bg: #005e9d;
-    --header-text-color: #d8d8d8;
-    --inverted-btn-text-color: #2a2a2a;
-    --light-dark-btn-content: "Light Mode";
-   
-    background-color: var(--body-bg);
-  }
-  
-button{
+body.dark {
+    background-color: #C84C09;
+    
+}
+
+button {
     margin: 15px;
     display: block;
-
 }
 
-input{
-    margin: 10px ;
+input {
+    margin: 10px;
+    border: none;
+    border-radius: 15px;
+    width: 200px;
+    height: 40px;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 25px;
 }
 
-header{
+header {
     display: flex;
 }
 
-
-h1{
+h1 {
     margin-left: 15px;
     font-size: 80px;
     animation-name: backInLeft;
 }
 
-
-.madlib-container{
+.madlib-container {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
 }
 
-
-.category-container{
+.category-container {
     display: flex;
     margin-left: auto;
     height: 70px;
-
-}
-
-.random-word{
-   
     
-    display: inline-block;
 }
 
-.bottom-btns{
+.random-word {
+    display: inline-block;
+    border: none;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 20px;
+    border-radius: 10px;
+    background: linear-gradient(315deg, #d27127, #f9862e);
+    box-shadow: -41px -41px 82px #e77c2b, 41px 41px 82px #eb7e2b;
+    
+
+}
+
+.category {
+    border: none;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 25px;
+    border-radius: 10px;
+    background: linear-gradient(315deg, #d27127, #f9862e);
+    box-shadow: -41px -41px 82px #e77c2b, 41px 41px 82px #eb7e2b;
+    width: 95px;
+    height: 75px;
+}
+
+button.dark{
+    background-color: black;
+    
+}
+
+.bottom-btns {
     display: flex;
     flex-direction: column;
     /* justify-content: space-between; */
     align-items: center;
     width: 90%;
-    padding: 10px;
-
+    padding: 10px;  
 }
 
-.bottom-btns > button{
+.bottom-buttons{
+    border: none;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 25px;
+    border-radius: 10px;
+    background: linear-gradient(315deg, #d27127, #f9862e);
+    
+}
+
+.bottom-btns>button {
     width: 100%;
     margin-top: 10px;
 }
 
-#wrapper{
+.animate__animated animate__rotateIn {
+    animation-name: rotateIn;
+}
+
+#wrapper {
     display: flex;
     flex-direction: row;
-    align-items: flex-start; 
-  }
+    align-items: flex-start;
+}
 
-#madlib-content{
+#madlib-content {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -106,17 +129,25 @@ h1{
     margin-left: 300px;
 }
 
+#generate-madlib{
+    border: none;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 25px;
+    border-radius: 10px;
+    background: linear-gradient(315deg, #d27127, #f9862e);
+}
+
 /* #light-dark-button{
     height: 40px;
     position: absolute;
     bottom: 5%;
 } */
 
-#form{
+#form {
     display: block;
     width: fit-content;
     position: absolute;
-    left: 0;
+    left: 3%;
 }
 
 /* @media only screen and (min-width: 768px) {
@@ -125,4 +156,3 @@ h1{
       margin: 30px 15px 0;
     }
   } */
-
