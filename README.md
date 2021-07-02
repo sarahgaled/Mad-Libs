@@ -17,10 +17,18 @@ Mad libs site:
 
 Technologies and sites used: html, css, javascript, google fonts, animate.css
 
-Pictures of your game on the web here
+wireframes:
+
 Pictures of your game in mobile view here
 
 Next steps: mobile design
 
-Credit: audio from 
+
+Credit: audio from:
 - [Bensounds](https://www.bensound.com/)
+
+button design from:
+- [neomorphism](https://neumorphism.io/#e0e0e0)
+
+fonts from:
+- [googlefonts](https://fonts.google.com/)
