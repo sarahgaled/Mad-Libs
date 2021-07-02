@@ -97,7 +97,7 @@ function checkUserColorSchemePreference() {
     }
 }
 
-function generateStory(event) { //grab the input values to generate the story
+function generateStory(event) {
     event.preventDefault()
     console.log('running')
     let noun = document.getElementById('noun').value
@@ -111,14 +111,14 @@ function generateStory(event) { //grab the input values to generate the story
     if (noun && verb && adjective && adverb && pluralNoun && presentVerb && event.target.id === 'generate-madlib') {
         madlibContent.classList.add("animate__animated", "animate__rotateIn")
         if (selectedCategory === 'dating') {
-            // madlibContent.classList.add("animate__animated", "animate__rotateIn")
+
             madlibContent.innerText = `I went on a date with ${noun} and it was interestingly ${adjective}. The guy couldn't stop ${adverb} ${presentVerb} too! Dating ${pluralNoun} is weak.`
             datingAudio.play()
             datingAudio.volume = .3
             setTimeout(() => datingAudio.pause(), 8000)
         }
         if (selectedCategory === 'marriage') {
-            // madlibContent.classList.add("animate__animated", "animate__rotateIn")
+
             madlibContent.innerText = `Marriage is like ${noun}, it's all ${noun} until you realize you made the biggest mistake by ${presentVerb} this loser. Just the thought of the ${adjective} ${noun} makes you nauseous.`
             marriageAudio.play()
             marriageAudio.volume = .3
@@ -126,7 +126,7 @@ function generateStory(event) { //grab the input values to generate the story
         }
 
         if (selectedCategory === 'adulthood') {
-            // madlibContent.classList.add("animate__animated", "animate__rotateIn")
+
             madlibContent.innerText = `There is nothing like a adulthood. Everyone tells you it's going to be a ${noun} and ${adjective}. But then you start ${adverb} ${presentVerb} and you realize all ${pluralNoun} were wrong. Adulthood sucks.`
             adulthoodAudio.play()
             adulthoodAudio.volume = .3
@@ -134,14 +134,14 @@ function generateStory(event) { //grab the input values to generate the story
         }
 
         if (selectedCategory === 'new-york') {
-            // madlibContent.classList.add("animate__animated", "animate__rotateIn")
+
             madlibContent.innerText = `New York is filled with ${noun}s and ${pluralNoun} who like to ${verb} ${adverb} all over the place with ${pluralNoun}`
             newYorkAudio.play()
             newYorkAudio.volume = .3
             setTimeout(() => newYorkAudio.pause(), 8000)
 
         } if (selectedCategory === "") {
-            // madlibContent.classList.add("animate__animated", "animate__rotateIn")
+
             madlibContent.innerText = `Getting into a car accident is like a ${noun}. You feel like a ${adjective} ${verb} and hope ${pluralNoun} is okay.`
             defaultAudio.play()
             defaultAudio.volume = .3
@@ -151,7 +151,7 @@ function generateStory(event) { //grab the input values to generate the story
     }
 }
 
-function resetStory() { //reseting all the inputs to strings which essentially resets the story
+function resetStory() {
     noun.value = ""
     verb.value = ""
     adjective.value = ""

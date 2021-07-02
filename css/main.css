@@ -5,19 +5,15 @@
 }
 
 body {
-
     background-color: var(--body-bg);
-    /* Use a system font, if none are available use an available sans-sarif font */
     display: flex;
     flex-direction: column;
     font-family: 'Big Shoulders Display', cursive;
     margin: 0;
-    /* align-items: center; */
 }
 
 body.dark {
     background-color: #C84C09;
-    
 }
 
 button {
@@ -55,7 +51,6 @@ h1 {
     display: flex;
     margin-left: auto;
     height: 70px;
-    
 }
 
 .random-word {
@@ -66,8 +61,6 @@ h1 {
     border-radius: 10px;
     background: linear-gradient(315deg, #d27127, #f9862e);
     box-shadow: -41px -41px 82px #e77c2b, 41px 41px 82px #eb7e2b;
-    
-
 }
 
 .category {
@@ -76,32 +69,28 @@ h1 {
     font-size: 25px;
     border-radius: 10px;
     background: linear-gradient(315deg, #d27127, #f9862e);
-    /* box-shadow: -41px -41px 82px #e77c2b, 41px 41px 82px #eb7e2b; */
     width: 95px;
     height: 75px;
 }
 
-button.dark{
+button.dark {
     background-color: black;
-    
 }
 
 .bottom-btns {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     align-items: center;
     width: 90%;
-    padding: 10px;  
+    padding: 10px;
 }
 
-.bottom-buttons{
+.bottom-buttons {
     border: none;
     font-family: 'Big Shoulders Display', cursive;
     font-size: 25px;
     border-radius: 10px;
     background: linear-gradient(315deg, #d27127, #f9862e);
-    
 }
 
 .bottom-btns>button {
@@ -129,7 +118,7 @@ button.dark{
     margin-left: 300px;
 }
 
-#generate-madlib{
+#generate-madlib {
     border: none;
     font-family: 'Big Shoulders Display', cursive;
     font-size: 25px;
@@ -137,7 +126,7 @@ button.dark{
     background: linear-gradient(315deg, #d27127, #f9862e);
 }
 
-#light-dark-button{
+#light-dark-button {
     /* height: 40px;
     position: absolute;
     bottom: 5%; */

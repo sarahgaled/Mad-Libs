@@ -10,7 +10,7 @@ Step 4: think of funny adverbs and input them in the adverb input box
 Step 5: think of funny adjectives and input them in the adjectives input box
 Step 6: think of funny plural nouns and input them in the plural nouns input box
 Step 7: or you can choose to press the "random" button that will generate a random noun/verb/adverb etc... for you.
-Step 8: or you can choose to press the "totally random" button that will randomly generate all the variables and randomly generate a story
+Step 8: or you can choose to press the "totally random" button that will randomly generate all the variables for the player
 Step 9: laugh
 Step 10: reset and play all over again!
 
