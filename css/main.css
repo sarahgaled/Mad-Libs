@@ -76,7 +76,7 @@ h1 {
     font-size: 25px;
     border-radius: 10px;
     background: linear-gradient(315deg, #d27127, #f9862e);
-    box-shadow: -41px -41px 82px #e77c2b, 41px 41px 82px #eb7e2b;
+    /* box-shadow: -41px -41px 82px #e77c2b, 41px 41px 82px #eb7e2b; */
     width: 95px;
     height: 75px;
 }
