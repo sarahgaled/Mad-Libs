@@ -1,6 +1,8 @@
-<Adult Mad Libs>: players, fill in the blanks with adjectives, nouns, verbs, and more. These words are inserted into the blanks and then the story is read aloud to receive hilarious results. There are no winners or losers, only laughter. This was my favorite childhood came and it always made me laugh so that is why I chose to build this game.
+ADULT MAD LIBS 
 
-getting started:
+players will fill in the blanks with adjectives, nouns, verbs, and more. These words are inserted into the blanks and then the story is read aloud to receive hilarious results. There are no winners or losers, only laughter. This was my favorite childhood came and it always made me laugh so that is why I chose to build this game.
+
+Getting started:
 Step 1: pick a category
 Step 2: think of funny nouns and input them in the noun input box
 Step 3: think of funny verbs and input them in the verb input box
@@ -12,22 +14,15 @@ Step 8: or you can choose to press the "totally random" button that will randoml
 Step 9: laugh
 Step 10: reset and play all over again!
 
-Mad libs site: 
+To play Mad libs click here: 
 - [sj-madlibs](https://sj-madlibs.netlify.app/)
 
-Technologies and sites used: html, css, javascript, google fonts, animate.css
-
-images:
-
-![](images/wireframe-1.png)
-![](images/wireframe-2.png)
-![](images/site-light%20mode.png)
-![](images/site-dark%20mode.png)
-
-Pictures of your game in mobile view here
-
-Next steps: mobile design
-
+Technologies and sites used: 
+ - html
+ - css
+ - javascript
+ - google fonts
+ - animate.css
 
 Credit: audio from:
 - [Bensounds](https://www.bensound.com/)
@@ -37,3 +32,20 @@ button design from:
 
 fonts from:
 - [googlefonts](https://fonts.google.com/)
+
+
+Pseudo Code:
+
+![](images/psuedo-code.png)
+
+images:
+
+![](images/wireframe-1.png)
+![](images/wireframe-2.png)
+![](images/site-light%20mode.png)
+![](images/site-dark%20mode.png)
+
+
+Next steps: 
+- mobile design 
+- more categories
