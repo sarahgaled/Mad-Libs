@@ -1,6 +1,6 @@
 ADULT MAD LIBS 
 
-players will fill in the blanks with adjectives, nouns, verbs, and more. These words are inserted into the blanks and then the story is read aloud to receive hilarious results. There are no winners or losers, only laughter. This was my favorite childhood game and it always made me laugh which is why I chose to build this game.
+players will fill in the blanks (inputs) with adjectives, nouns, verbs, and more. When the words are inserted into the blanks and and lib it is pressed, the story will generate and render on to the browser and is read aloud to receive hilarious results. There are no winners or losers, only laughter. This was my favorite childhood game and it always made me laugh which is why I chose to build this game.
 
 Getting started:
 Step 1: pick a category
