@@ -17,7 +17,12 @@ Mad libs site:
 
 Technologies and sites used: html, css, javascript, google fonts, animate.css
 
-wireframes:
+images:
+
+![](images/wireframe-1.png)
+![](images/wireframe-2.png)
+![](images/site-light%20mode.png)
+![](images/site-dark%20mode.png)
 
 Pictures of your game in mobile view here
 
