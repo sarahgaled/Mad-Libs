@@ -36,7 +36,7 @@ fonts from:
 
 Pseudo Code:
 
-![](images/psuedo-code.png)
+![](images/pseudo-code.png)
 
 images:
 
