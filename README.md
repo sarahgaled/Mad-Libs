@@ -49,3 +49,4 @@ images:
 Next steps: 
 - mobile design 
 - more categories
+- better templates

@@ -23,7 +23,7 @@ let nounList = ['abandoned home', 'airfield', 'amusement park', 'antique shop', 
 let adjectiveList = ['dead', 'hairless', 'sadistic', 'metal', 'wild', 'domesticated', 'abnormal', 'medicated', 'cocky', 'massive', 'disrespectful', 'impressive', 'out of control', 'internet worthy', 'hilarious', 'sexy', 'hot', 'very tactful', 'bearded', 'duck-like', 'violent', 'slimy', 'insanely creepy', 'embarrassed to the bone', 'self-centered', 'talking', 'naked', 'angry', 'shaky', 'deep', 'sick', 'zippy', 'sticky', 'fluffy', 'frozen', 'unholy', 'painfully honest', 'filthy', 'bonkers', 'harsh', 'frisky', 'greedy', 'crawly', 'insane', 'hideous', 'ungodly', 'abusive', 'drunken', 'hateful', 'idiotic', 'twisted', 'useless', 'yapping', 'magical', 'indecent', 'godawful', 'arrogant', 'confused', 'flirting', 'high-end', 'insecure', 'maniacal']
 
 
-let verbList = ['surround', 'stab', 'return', 'medicate', 'blindsiding', 'boogieing', 'flappig', 'tripping', 'swatting', 'sucking in', 'harassing', 'trapping', 'snooping', 'exploding', 'sketching', 'scattering', 'challenging', 'fighting', 'burying', 'splattering', 'smacking', 'peddling', 'balancing', 'tripping up', 'boggling', 'poking', 'critiquing', 'fearing', 'initiating', 'lining up', 'running over', 'scheduling', 'cook', 'imprisoning', 'underestimating', 'cajole', 'wheedling', 'soft soaping', 'buttering up', 'sweet-talk', 'prevailing', 'shredding', 'drinking', 'disputing', 'echoing', 'mimicing', 'berating', 'castigating', 'underrating', 'taunting']
+let verbList = ['surround', 'stab', 'return', 'medicate', 'blindside', 'boogie', 'flap', 'trip', 'swat', 'suck in', 'harass', 'trap', 'snoop', 'explode', 'sketch', 'scatter', 'challenge', 'fighting', 'burying', 'splatter', 'smack', 'peddle', 'balance', 'trip up', 'boggle', 'poke', 'critique', 'fear', 'initiate', 'line up', 'run over', 'schedule', 'cook', 'imprison', 'underestimate', 'cajole', 'wheedle', 'soft soap', 'butter up', 'sweet-talk', 'prevaile', 'shred', 'drink', 'dispute', 'echo', 'mimic', 'berate', 'castigate', 'underrate', 'taunt']
 
 let presentTenseVerbList = ['surrounding', 'stabbing', 'returning', 'medicating', 'blindsiding', 'boogieing', 'flappig', 'tripping', 'swatting', 'sucking in', 'harassing', 'trapping', 'snooping', 'exploding', 'sketching', 'scattering', 'challenging', 'fighting', 'burying', 'splattering', 'smacking', 'peddling', 'balancing', 'tripping up', 'boggling', 'poking', 'critiquing', 'fearing', 'initiating', 'lining up', 'running over', 'scheduling', 'cook', 'imprisoning', 'underestimating', 'cajole', 'wheedling', 'soft soaping', 'buttering up', 'sweet-talk', 'prevailing', 'shredding', 'drinking', 'disputing', 'echoing', 'mimicing', 'berating', 'castigating', 'underrating', 'taunting']
 
@@ -112,14 +112,14 @@ function generateStory(event) { //grab the input values to generate the story
         madlibContent.classList.add("animate__animated", "animate__rotateIn")
         if (selectedCategory === 'dating') {
             // madlibContent.classList.add("animate__animated", "animate__rotateIn")
-            madlibContent.innerText = `I went on a date in ${noun} and it was interestingly ${adjective}. The guy couldn't stop ${adverb} ${verb} too! Dating ${pluralNoun} is weak.`
+            madlibContent.innerText = `I went on a date with ${noun} and it was interestingly ${adjective}. The guy couldn't stop ${adverb} ${presentVerb} too! Dating ${pluralNoun} is weak.`
             datingAudio.play()
             datingAudio.volume = .3
             setTimeout(() => datingAudio.pause(), 8000)
         }
         if (selectedCategory === 'marriage') {
             // madlibContent.classList.add("animate__animated", "animate__rotateIn")
-            madlibContent.innerText = `Marriage is like ${noun}, it's all ${noun} until you realize you made the biggest mistake by ${presentVerb} this shmuck. Just the thought of the ${adjective} ${noun} makes you nauseous.`
+            madlibContent.innerText = `Marriage is like ${noun}, it's all ${noun} until you realize you made the biggest mistake by ${presentVerb} this loser. Just the thought of the ${adjective} ${noun} makes you nauseous.`
             marriageAudio.play()
             marriageAudio.volume = .3
             setTimeout(() => marriageAudio.pause(), 8000)
@@ -127,7 +127,7 @@ function generateStory(event) { //grab the input values to generate the story
 
         if (selectedCategory === 'adulthood') {
             // madlibContent.classList.add("animate__animated", "animate__rotateIn")
-            madlibContent.innerText = `There is nothing like a adulthood. Everyone tells you it's going to be an ${noun} and ${adjective}. But then you start ${adverb} ${verb} and you realize all ${pluralNoun} were wrong. Adulthood sucks.`
+            madlibContent.innerText = `There is nothing like a adulthood. Everyone tells you it's going to be a ${noun} and ${adjective}. But then you start ${adverb} ${presentVerb} and you realize all ${pluralNoun} were wrong. Adulthood sucks.`
             adulthoodAudio.play()
             adulthoodAudio.volume = .3
             setTimeout(() => adulthoodAudio.pause(), 10000)
@@ -135,14 +135,14 @@ function generateStory(event) { //grab the input values to generate the story
 
         if (selectedCategory === 'new-york') {
             // madlibContent.classList.add("animate__animated", "animate__rotateIn")
-            madlibContent.innerText = `New York is filled with ${noun}s and ${pluralNoun}s who like to ${verb} ${adverb} all over the place with ${pluralNoun}`
+            madlibContent.innerText = `New York is filled with ${noun}s and ${pluralNoun} who like to ${verb} ${adverb} all over the place with ${pluralNoun}`
             newYorkAudio.play()
             newYorkAudio.volume = .3
             setTimeout(() => newYorkAudio.pause(), 8000)
 
         } if (selectedCategory === "") {
             // madlibContent.classList.add("animate__animated", "animate__rotateIn")
-            madlibContent.innerText = `Getting into a car accident is like ${noun}. You feel like ${verb} and ${adjective} and hope ${pluralNoun} is okay.`
+            madlibContent.innerText = `Getting into a car accident is like a ${noun}. You feel like a ${adjective} ${verb} and hope ${pluralNoun} is okay.`
             defaultAudio.play()
             defaultAudio.volume = .3
             setTimeout(() => defaultAudio.pause(), 8000)
