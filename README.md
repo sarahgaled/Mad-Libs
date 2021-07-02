@@ -12,7 +12,8 @@ Step 8: or you can choose to press the "totally random" button that will randoml
 Step 9: laugh
 Step 10: reset and play all over again!
 
-Mad libs site: https://sj-madlibs.netlify.app/
+Mad libs site: 
+- [sj-madlibs](https://sj-madlibs.netlify.app/)
 
 Technologies and sites used: html, css, javascript, google fonts, animate.css
 
@@ -20,3 +21,6 @@ Pictures of your game on the web here
 Pictures of your game in mobile view here
 
 Next steps: mobile design
+
+Credit: audio from 
+- [Bensounds](https://www.bensound.com/)

@@ -137,11 +137,19 @@ button.dark{
     background: linear-gradient(315deg, #d27127, #f9862e);
 }
 
-/* #light-dark-button{
-    height: 40px;
+#light-dark-button{
+    /* height: 40px;
     position: absolute;
-    bottom: 5%;
-} */
+    bottom: 5%; */
+    border: none;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 20px;
+    border-radius: 10px;
+    background: linear-gradient(315deg, #ff6f00, #f9862e);
+    height: 40px;
+    width: 90px;
+    color: black;
+}
 
 #form {
     display: block;
