@@ -59,7 +59,9 @@ const lightDarkBtn = document.querySelector("#light-dark-button")
 categoryContainer.style.display = 'visible'
 const marriageAudio = new Audio("../music/MarriageCategory.mp3")
 const newYorkAudio = new Audio("../music/NewYorkAudio.mp3")
-
+const adulthoodAudio = new Audio("../music/adulthood.mp3")
+const datingAudio = new Audio("../music/dating.mp3")
+const defaultAudio = new Audio("../music/defaultAudio.mp3")
 /*----------------------------- Event Listeners -----------------------------*/
 
 randomNoun.addEventListener('click', autoFillNoun)
@@ -76,7 +78,6 @@ libIt.addEventListener('click', generateStory)
 reset.addEventListener("click", resetStory)
 form.addEventListener("submit", generateStory)
 lightDarkBtn.addEventListener("click", colorScheme.change)
-// lightDarkBtn.addEventListener("click", changeTheme)
 /*-------------------------------- Functions --------------------------------*/
 
 checkUserColorSchemePreference()
@@ -90,12 +91,6 @@ function checkUserColorSchemePreference() {
         buttons.classList.toggle('dark')
     }
 }
-
-// function changeTheme(){
-//     categoryBtns.classList.add("dark")
-//     buttons.classList.add("dark")
-//     document.body.classList.add('dark')
-// }
 
 function generateStory(event) { //grab the input values to generate the story
     event.preventDefault()
@@ -112,18 +107,24 @@ function generateStory(event) { //grab the input values to generate the story
         if (selectedCategory === 'dating') {
             // madlibContent.classList.add("animate__animated", "animate__rotateIn")
             madlibContent.innerText = `I went on a date in ${noun} and it was interestingly ${adjective}. The guy couldn't stop ${verb} and ${adverb} too! Dating ${pluralNoun} is weak.`
+            datingAudio.play()
+            datingAudio.volume = .3
+            setTimeout(() => datingAudio.pause(), 8000)
         }
         if (selectedCategory === 'marriage') {
             // madlibContent.classList.add("animate__animated", "animate__rotateIn")
             madlibContent.innerText = `Marriage is like ${noun}, it's all ${noun} until you realize you made the biggest mistake by ${verb} this shmuck. Just the thought of ${adverb} makes you nauseous.`
             marriageAudio.play()
             marriageAudio.volume = .3
-            setTimeout(() => marriageAudio.pause(), 7000)
+            setTimeout(() => marriageAudio.pause(), 8000)
         }
 
         if (selectedCategory === 'adulthood') {
             // madlibContent.classList.add("animate__animated", "animate__rotateIn")
             madlibContent.innerText = `There is nothing like a adulthood. Everyone tells you it's going to be ${noun} and ${adjective}. But then you start ${verb} and ${adverb} and you realize all ${pluralNoun}s were wrong. Adulthood sucks.`
+            adulthoodAudio.play()
+            adulthoodAudio.volume = .3
+            setTimeout(() => adulthoodAudio.pause(), 10000)
         }
 
         if (selectedCategory === 'new-york') {
@@ -131,11 +132,14 @@ function generateStory(event) { //grab the input values to generate the story
             madlibContent.innerText = `New York is filled with ${noun}s and ${adjective}s who like to ${verb} and ${adverb} all over the place with ${pluralNoun}`
             newYorkAudio.play()
             newYorkAudio.volume = .3
-            setTimeout(() => newYorkAudio.pause(), 7000)
+            setTimeout(() => newYorkAudio.pause(), 8000)
 
         } if (selectedCategory === "") {
             // madlibContent.classList.add("animate__animated", "animate__rotateIn")
             madlibContent.innerText = `Getting into a car accident is like ${noun}. You feel like ${verb} and ${adjective} and hope ${pluralNoun} is okay.`
+            defaultAudio.play()
+            defaultAudio.volume = .3
+            setTimeout(() => defaultAudio.pause(), 8000)
             categoryContainer.style.visibility = 'hidden'
         }
     }
@@ -156,12 +160,14 @@ function resetStory() { //reseting all the inputs to strings which essentially r
 
     marriageAudio.pause()
     newYorkAudio.pause()
+    adulthoodAudio.pause()
+    datingAudio.pause()
+    defaultAudio.pause()
 
     toggleVisibility()
 }
 
 function generateRandom(choicesArr) {
-
     let randomItem
     randomItem = choicesArr[Math.floor(Math.random() * choicesArr.length)]
     return randomItem
@@ -198,26 +204,15 @@ function totalAutoFill() {
 
 
 function toggleVisibility() {
-
-    // if (categoryContainer.style.visibility === 'visible') {
-    // } else {
     categoryContainer.style.visibility = 'visible'
-    // }
     console.log(`visibility is ${categoryContainer.style.visibility}`)
-
 }
 
 function setCategory(evt) {
-
     selectedCategory = evt.target.id
     console.log(selectedCategory)
     categoryContainer.style.visibility = 'hidden'
-
-
-
-
 }
 
 
 
-  //categoryContainer.style.display= 'none'
