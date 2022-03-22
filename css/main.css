@@ -156,7 +156,7 @@ button.dark {
         font-size: 40px;
         position: absolute;
         margin-top: 60px;
-        left: 100px;
+        left: 90px;
     }
 
     input {
@@ -199,7 +199,7 @@ button.dark {
     .bottom-buttons {
         font-size: 13px;
         border-radius: 10px;
-        margin-right: 22px;
+        margin-right: 20px;
     }
 
     .bottom-btns>button {
@@ -214,13 +214,13 @@ button.dark {
     }
 
     #form {
-        left: 28%;
+        left: 26%;
         margin-top: 30px;
     }
 
     #generate-madlib {
         font-size: 13px;
-        margin-right: 22px;
+        margin-right: 20px;
     }
 
     #madlib-content {
@@ -234,7 +234,7 @@ button.dark {
         font-size: 16px;
         bottom: 240px;
         /* right: 20% */
-        right: 100px;
+        right: 90px;
     }
 
 
