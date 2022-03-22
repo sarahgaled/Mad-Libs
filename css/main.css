@@ -156,7 +156,7 @@ button.dark {
         font-size: 40px;
         position: absolute;
         margin-top: 60px;
-        left: 140px;
+        left: 120px;
     }
 
     input {
@@ -232,7 +232,7 @@ button.dark {
         width: 50%;
         position: absolute;
         font-size: 16px;
-        bottom: 300px;
+        bottom: 240px;
         /* right: 20% */
         right: 120px;
     }
